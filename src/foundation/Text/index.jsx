@@ -1,8 +1,22 @@
-import styled, { css } from 'styled-components'
-import get from 'lodash/get'
-import PropTypes from 'prop-types'
-import { propToStyle } from '../../theme/utils/propToStyle'
-import { breakpointsMedia } from '../../theme/utils/breakpointsMedia'
+/* eslint-disable indent */
+import styled, { css } from 'styled-components';
+import get from 'lodash/get';
+import PropTypes from 'prop-types';
+import propToStyle from '../../theme/utils/propToStyle';
+import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+
+const Text = ({ variant, children, tag, ...props }) => (
+  <TextBase
+    as={tag}
+    variant={variant}
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    {...props}
+  >
+    {children}
+  </TextBase>
+);
+
+export default Text;
 
 const paragraph1 = css`
   ${({ theme }) => css`
@@ -10,7 +24,7 @@ const paragraph1 = css`
     font-weight: ${theme.typographyVariants.paragraph1.fontWeight};
     line-height: ${theme.typographyVariants.paragraph1.lineHeight};
   `}
-`
+`;
 
 const smallestException = css`
   ${({ theme }) => css`
@@ -18,7 +32,7 @@ const smallestException = css`
     font-weight: ${theme.typographyVariants.smallestException.fontWeight};
     line-height: ${theme.typographyVariants.smallestException.lineHeight};
   `}
-`
+`;
 
 /* const buttonText = css`
   ${({ theme }) => css`
@@ -44,7 +58,7 @@ export const TextStyleVariants = {
           font-weight: ${theme.typographyVariants.buttonText.fontWeight};
           line-height: ${theme.typographyVariants.buttonText.lineHeight};
         `}
-      `
+      `,
     })}
   `,
   hugeTitle: css`
@@ -74,7 +88,7 @@ export const TextStyleVariants = {
           font-weight: ${theme.typographyVariants.hugeTitle.fontWeight};
           line-height: ${theme.typographyVariants.hugeTitle.lineHeight};
         `}
-      `
+      `,
     })}
   `,
   title: css`
@@ -90,7 +104,7 @@ export const TextStyleVariants = {
           font-weight: ${theme.typographyVariants.title.fontWeight};
           line-height: ${theme.typographyVariants.title.lineHeight};
         `}
-      `
+      `,
     })}
   `,
   subTitle: css`
@@ -106,35 +120,22 @@ export const TextStyleVariants = {
           font-weight: ${theme.typographyVariants.subTitle.fontWeight};
           line-height: ${theme.typographyVariants.subTitle.lineHeight};
         `}
-      `
+      `,
     })}
-  `
-}
+  `,
+};
 
 const TextBase = styled.span`
   ${({ variant }) => TextStyleVariants[variant]}
   color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
   text-decoration: none;
   ${propToStyle('textAlign')}
-`
-
-export function Text({ variant, children, tag, ...props }) {
-  return (
-    <TextBase
-      as={tag}
-      variant={variant}
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...props}
-    >
-      {children}
-    </TextBase>
-  )
-}
+`;
 
 Text.defaultProps = {
   tag: 'span',
-  variant: 'paragraph1'
-}
+  variant: 'paragraph1',
+};
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
@@ -146,6 +147,6 @@ Text.propTypes = {
     'paragraph1',
     'paragraph2',
     'smallestException',
-    'buttonText'
-  ])
-}
+    'buttonText',
+  ]),
+};

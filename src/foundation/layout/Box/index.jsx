@@ -1,9 +1,7 @@
 import styled from 'styled-components';
-import { propToStyle } from '../../../theme/utils/propToStyle';
-// import { propToStyle } from '../../../../theme/utils/propToStyle';
-
-
-export const Box = styled.div`
+import propToStyle from '../../../theme/utils/propToStyle';
+// import propToStyle from '../../../../theme/utils/propToStyle';
+const Box = styled.div`
   ${propToStyle('display')}
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
@@ -14,3 +12,5 @@ export const Box = styled.div`
   ${propToStyle('backgroundPosition')}
   ${propToStyle('backgroundColor')}
 `;
+
+export default Box;

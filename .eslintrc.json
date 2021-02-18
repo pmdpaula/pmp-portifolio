@@ -23,6 +23,7 @@
   ],
   "rules": {
     // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 
     // We will use TypeScript's types for component props instead
     "react/prop-types": "off",
@@ -31,6 +32,9 @@
     "react/react-in-jsx-scope": "off",
 
     "prettier/prettier": ["error"],
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "object-curly-newline": "off",
+    "comma-dangle": "off",
+    "arrow-parens": "off"
   }
 }

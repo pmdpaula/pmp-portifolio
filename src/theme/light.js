@@ -1,59 +1,59 @@
-import { typographyVariants } from './typographyVariants'
-import { breakpoints, defaultStyles } from './index'
+import typographyVariants from './typographyVariants';
+import { breakpoints, defaultStyles } from './index';
 
 export const colors = {
   background: {
     main: {
-      color: '#cfd8dc'
+      color: '#cfd8dc',
     },
     secondary: {
-      color: '#eceff1'
-    }
+      color: '#eceff1',
+    },
   },
   text: {
     head1: {
-      color: '#000a12'
+      color: '#000a12',
     },
     head2: {
-      color: '#263238'
+      color: '#263238',
     },
     main: {
-      color: '#29434E'
-    }
+      color: '#29434E',
+    },
   },
   borders: {
     main: {
-      color: '#ffad42'
-    }
+      color: '#ffad42',
+    },
   },
   primary: {
     main: {
       color: '#546E7A',
-      contrastText: '#fff'
-    }
+      contrastText: '#fff',
+    },
   },
   secondary: {
     main: {
       color: '#F57C00',
-      contrastText: '#29434E'
-    }
+      contrastText: '#29434E',
+    },
   },
   tertiary: {
     main: {
       color: '#070C0E',
-      contrastText: '#fff'
+      contrastText: '#fff',
     },
     light: {
       color: '#819CA9',
-      contrastText: '#fff'
-    }
-  }
-}
+      contrastText: '#fff',
+    },
+  },
+};
 
 export default {
   title: 'light',
   colors,
   typographyVariants,
   breakpoints,
-  defaultStyles
-}
+  defaultStyles,
+};

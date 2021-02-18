@@ -1,8 +1,9 @@
+/* eslint-disable indent */
 import styled, { css } from 'styled-components';
-import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '../../../foundation/Text';
 
-export const MenuWrapper = styled.nav`
+const MenuWrapper = styled.nav`
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
@@ -31,15 +32,17 @@ export const MenuWrapper = styled.nav`
   })}
 `;
 
+export default MenuWrapper;
+
 MenuWrapper.LeftSide = styled.div`
   padding: 0;
   margin: 0;
   order: 1;
   ${breakpointsMedia({
     md: css`
-        width: 131px;
-        height: 32px;
-      `,
+      width: 131px;
+      height: 32px;
+    `,
   })}
   ${breakpointsMedia({
     md: css`
@@ -59,8 +62,8 @@ MenuWrapper.CentralSide = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 17px;
-  border-top: 1px solid #88989E;
-  border-bottom: 1px solid #88989E;
+  border-top: 1px solid #88989e;
+  border-bottom: 1px solid #88989e;
   padding: 12px;
 
   ${breakpointsMedia({
@@ -79,21 +82,20 @@ MenuWrapper.CentralSide = styled.div`
     text-align: center;
     display: block;
     text-decoration: none;
-    color: #88989E;
+    color: #88989e;
     transition: 200ms ease-in-out;
     ${breakpointsMedia({
-    xs: css`
+      xs: css`
         ${TextStyleVariants.smallestException}
-    `,
-    md: css`
-      ${TextStyleVariants.paragraph1}
-    `,
-  })}
+      `,
+      md: css`
+        ${TextStyleVariants.paragraph1}
+      `,
+    })}
     &:hover,
     &:focus {
       font-weight: 500;
-      color: #070C0E;
-
+      color: #070c0e;
     }
   }
 `;

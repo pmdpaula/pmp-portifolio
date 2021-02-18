@@ -25,10 +25,10 @@ const FooterWrapper = styled.footer`
   a {
     color: ${({ theme }) => theme.colors.primary.main.color};
     text-decoration: none;
-    transition: .3s;
+    transition: 0.3s;
     &:hover,
     &:focus {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 `;
@@ -38,13 +38,13 @@ export default function Footer(props) {
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo.svg" alt="Logo Alura" />
+        <img
+          src="https://www.alura.com.br/assets/img/alura-logo.svg"
+          alt="Logo Alura"
+        />
       </a>
       <p>
-        Orgulhosamente criado durante
-        {' '}
-        o
-        {' '}
+        Orgulhosamente criado durante o{' '}
         <a href="https://www.alura.com.br/">
           <span>Bootcamp Alura JAM Stack</span>
         </a>
