@@ -10,6 +10,7 @@
     "next": "latest",
     "next-images": "^1.7.0",
     "react": "^16.8.0",
+    "react-anime": "^3.0.3",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
     "styled-components": "^5.0.0",

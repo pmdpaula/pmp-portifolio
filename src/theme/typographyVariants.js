@@ -1,5 +1,25 @@
 export const typographyVariants = {
   // [title]
+  hugeTitle: {
+    fontSize: '90px',
+    fontWeight: '700',
+    lineHeight: 1.25 // 125%
+  },
+  hugeTitleXS: {
+    fontSize: '30px',
+    fontWeight: '400',
+    lineHeight: 1.25 // 125%
+  },
+  hugeTitleSM: {
+    fontSize: '50px',
+    fontWeight: '400',
+    lineHeight: 1.25 // 125%
+  },
+  hugeTitleMD: {
+    fontSize: '70px',
+    fontWeight: '500',
+    lineHeight: 1.25 // 125%
+  },
   title: {
     fontSize: '32px',
     fontWeight: '700',

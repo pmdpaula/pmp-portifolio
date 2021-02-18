@@ -1,17 +1,16 @@
-import { createGlobalStyle } from 'styled-components'
-import { normalize } from 'styled-normalize'
+import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-
   ${normalize}
   html,
   body {
     margin: 0;
     padding: 0;
-    font-family: ${({ theme }) => theme.fontFamily};
+    font-family: ${({ theme }) => theme.defaultStyles.fontFamily};
     background-color: ${({ theme }) => theme.colors.background.main.color};
   }
   /* Full height layout */
@@ -25,6 +24,6 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

@@ -4,21 +4,21 @@ import { breakpoints, defaultStyles } from './index'
 export const colors = {
   background: {
     main: {
-      color: '#cfd8dc'
+      color: '#00251a'
     },
     secondary: {
-      color: '#eceff1'
+      color: '#004d40'
     }
   },
   text: {
     head1: {
-      color: '#000a12'
+      color: '#62757f'
     },
     head2: {
-      color: '#263238'
+      color: '#90a4ae'
     },
     main: {
-      color: '#29434E'
+      color: '#eceff1'
     }
   },
   borders: {
