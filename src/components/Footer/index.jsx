@@ -1,6 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import Box from '../../foundation/layout/Box';
+import Logo from '../../theme/Logo';
+import breakpointsMedia from '../../theme/utils/breakpointsMedia';
 
 const footerHeight = 80;
+
+const Footer = props => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <FooterWrapper {...props}>
+    <p>Portifólio de projetos executados por mim</p>
+  </FooterWrapper>
+);
+
+export default Footer;
 
 const FooterWrapper = styled.footer`
   padding: 14px 28px;
@@ -17,13 +29,23 @@ const FooterWrapper = styled.footer`
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   /* align-self: flex-end; */
   /* flex-shrink: 0; */
+  ${breakpointsMedia({
+    xs: css`
+      /* width: 50px; */
+      height: 60px;
+    `,
+    md: css`
+      /* width: 131px; */
+      height: 80px;
+    `,
+  })}
 
   img {
     width: 58px;
     margin-right: 23px;
   }
   a {
-    color: ${({ theme }) => theme.colors.primary.main.color};
+    color: ${({ theme }) => theme.colors.text.head1.color};
     text-decoration: none;
     transition: 0.3s;
     &:hover,
@@ -32,23 +54,3 @@ const FooterWrapper = styled.footer`
     }
   }
 `;
-
-export default function Footer(props) {
-  return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <FooterWrapper {...props}>
-      <a href="https://www.alura.com.br/">
-        <img
-          src="https://www.alura.com.br/assets/img/alura-logo.svg"
-          alt="Logo Alura"
-        />
-      </a>
-      <p>
-        Orgulhosamente criado durante o{' '}
-        <a href="https://www.alura.com.br/">
-          <span>Bootcamp Alura JAM Stack</span>
-        </a>
-      </p>
-    </FooterWrapper>
-  );
-}

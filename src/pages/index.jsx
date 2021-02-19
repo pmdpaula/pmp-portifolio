@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import Text from '../foundation/Text';
 import Box from '../foundation/layout/Box';
 import FrontText from '../components/FrontText/FrontText';
@@ -9,8 +10,11 @@ const Capa = () => (
   <>
     <BackgroundAnimation
       numberOfBlocks={50}
-      duration={5000}
+      duration={3000}
       direction="alternate"
+      loop
+      easing="easeInOutBack"
+      dispersion={500}
     />
     <Box
       flex={1}
@@ -30,7 +34,7 @@ const Capa = () => (
         <FrontText tag="span" variant="hugeTitle" textAlign="center">
           Pedro de Paula
         </FrontText>
-        <Text
+        <TextPortifolio
           tag="a"
           variant="title"
           color="background.secondary"
@@ -38,12 +42,16 @@ const Capa = () => (
           href="/projects"
         >
           PORTIFÓLIO
-        </Text>
+        </TextPortifolio>
       </Box>
 
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   </>
 );
+
+const TextPortifolio = styled(Text)`
+  margin-top: 50px;
+`;
 
 export default Capa;

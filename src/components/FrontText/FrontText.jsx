@@ -60,8 +60,10 @@ const FrontText = ({ tag, variant, textAlign, ...props }) => (
     tag={tag}
     variant={variant}
     textAlign={textAlign}
+    // eslint-disable-next-line react/destructuring-assignment
     data-text={props.children}
   >
+    {/* eslint-disable-next-line react/destructuring-assignment */}
     {props.children}
   </FrontTextStyled>
 );

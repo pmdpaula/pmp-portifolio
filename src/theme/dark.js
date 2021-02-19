@@ -12,13 +12,16 @@ export const colors = {
   },
   text: {
     head1: {
-      color: '#62757f',
+      color: '#9ea7aa',
     },
     head2: {
-      color: '#90a4ae',
+      color: '#cfd8dc',
     },
     main: {
       color: '#eceff1',
+    },
+    link: {
+      color: '#cfd8dc',
     },
   },
   borders: {

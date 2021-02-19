@@ -11,10 +11,11 @@ export default function Home() {
   return (
     <>
       <BackgroundAnimation
-        numberOfBlocks={50}
-        duration={10}
+        numberOfBlocks={30}
+        duration={100}
         direction="normal"
-        loop={false}
+        easing="linear"
+        dispersion={400}
       />
 
       <Box

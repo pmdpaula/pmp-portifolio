@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: ${({ theme }) => theme.defaultStyles.fontFamily};
+    color: ${({ theme }) => theme.colors.text.main.color};
     background-color: ${({ theme }) => theme.colors.background.main.color};
   }
   /* Full height layout */

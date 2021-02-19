@@ -2,22 +2,22 @@ const typographyVariants = {
   // [title]
   hugeTitle: {
     fontSize: '90px',
-    fontWeight: '700',
+    fontWeight: '800',
     lineHeight: 1.25, // 125%
   },
   hugeTitleXS: {
-    fontSize: '30px',
-    fontWeight: '400',
+    fontSize: '40px',
+    fontWeight: '600',
     lineHeight: 1.25, // 125%
   },
   hugeTitleSM: {
     fontSize: '50px',
-    fontWeight: '400',
+    fontWeight: '600',
     lineHeight: 1.25, // 125%
   },
   hugeTitleMD: {
     fontSize: '70px',
-    fontWeight: '500',
+    fontWeight: '700',
     lineHeight: 1.25, // 125%
   },
   title: {
