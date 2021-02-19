@@ -2,13 +2,14 @@ import styled, { css } from 'styled-components';
 import Box from '../../foundation/layout/Box';
 import Logo from '../../theme/Logo';
 import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+import NeumorphicButton from '../NeumorphicButton';
 
 const footerHeight = 80;
 
 const Footer = props => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <FooterWrapper {...props}>
-    <p>Portifólio de projetos executados por mim</p>
+    <NeumorphicButton href="/about">Sobre mim</NeumorphicButton>
   </FooterWrapper>
 );
 
@@ -21,9 +22,11 @@ const FooterWrapper = styled.footer`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+  font-size: 0.9rem;
   /* height: ${footerHeight}px; */
   /* height: 50px; */
   /* min-width: 95vw; */
+
   background: ${({ theme }) => theme.colors.background.secondary.color};
   opacity: 0.8;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);

@@ -30,7 +30,7 @@ export default function Home() {
         <Grid.Col display="flex" justifyContent="center" alignItems="center">
           <Grid.Row>
             <Text tag="p" variant="title">
-              PROJETOS
+              SOBRE
             </Text>
           </Grid.Row>
         </Grid.Col>

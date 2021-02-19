@@ -10,8 +10,12 @@ const ButtonGhost = css`
 `;
 
 const ButtonDefault = css`
-  color: ${({ theme, variant }) => get(theme, `colors.${variant}.contrastText`)};
-  background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
+  color: ${({ theme, variant }) =>
+    // eslint-disable-next-line implicit-arrow-linebreak
+    get(theme, `colors.${variant}.contrastText`)};
+  background-color: ${({ theme, variant }) =>
+    // eslint-disable-next-line implicit-arrow-linebreak
+    get(theme, `colors.${variant}.color`)};
 `;
 
 const Button = styled.button`
