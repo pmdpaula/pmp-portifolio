@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import Anime, { anime } from 'react-anime';
 
@@ -45,11 +44,15 @@ const BackgroundAnimation = ({
         direction={direction}
         loop={loop}
         // delay={anime.stagger(10)}
-        delay={(el, index) => index * 30}
+        delay={(el, index) => (index * duration) / 100}
         scale={[1, 5]}
-        translateX={() => anime.random(calculateDispersion() * -1, calculateDispersion())
+        translateX={() =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          anime.random(calculateDispersion() * -1, calculateDispersion())
         }
-        translateY={() => anime.random(calculateDispersion() / -2, calculateDispersion() / 2)
+        translateY={() =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          anime.random(calculateDispersion() / -2, calculateDispersion() / 2)
         }
         // rotate={anime.stagger([-360, 360])}
       >
