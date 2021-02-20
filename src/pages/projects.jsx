@@ -4,6 +4,7 @@ import Grid from '../foundation/layout/Grid';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 import BackgroundAnimation from '../components/BackgroundAnimation/index';
+import ProjectCard from '../components/ProjectCard/index';
 
 export default function Home() {
   // const { colors, title, defaultStyles } = useContext(ThemeContext);
@@ -23,14 +24,22 @@ export default function Home() {
         display="flex"
         flexWrap="wrap"
         flexDirection="column"
-        justifyContent="space-between"
+        justifyContent="center"
         style={{ zIndex: 1000 }}
       >
         <Menu />
         <Grid.Col display="flex" justifyContent="center" alignItems="center">
           <Grid.Row>
             <Text tag="p" variant="title">
-              PROJETOS
+              <Box>
+                <ProjectCard>
+                  <img
+                    src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2ltcGxlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    width="200px"
+                    alt="Imagem"
+                  />
+                </ProjectCard>
+              </Box>
             </Text>
           </Grid.Row>
         </Grid.Col>

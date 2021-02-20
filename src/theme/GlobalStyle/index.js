@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   ${normalize}
+
+  html {
+    font-size: 62.5%;
+  }
+
   html,
   body {
     margin: 0;
@@ -13,13 +18,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.defaultStyles.fontFamily};
     color: ${({ theme }) => theme.colors.text.main.color};
     background-color: ${({ theme }) => theme.colors.background.main.color};
-  }
-  /* Full height layout */
-  html, body {
     display: flex;
     min-height: 100vh;
     width: 100%;
   }
+  /* Full height layout */
   #__next {
     flex: 1;
     display: flex;
