@@ -1,6 +1,7 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+import propToStyle from '../../theme/utils/propToStyle';
 
 // https://youtu.be/uNjfslp6Qnc
 
@@ -18,6 +19,8 @@ const borderMd = '20px';
 
 const NeumButton = styled.a`
   position: relative;
+  /* ${propToStyle('marginRight')} */
+
   ${breakpointsMedia({
     xs: css`
       padding: 8px 18px;
