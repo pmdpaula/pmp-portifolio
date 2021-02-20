@@ -13,6 +13,7 @@ export const defaultStyles = {
   transition: '200ms ease-in-out',
   fontFamily: "'Roboto', sans-serif",
   boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.25)',
+  maxWidth: '1440px',
 };
 
 breakpoints.propTypes = {
