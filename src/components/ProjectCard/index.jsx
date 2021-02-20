@@ -2,20 +2,30 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Tilt from 'react-parallax-tilt';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const ProjectCard = props => (
+const ProjectCard = ({ title, titleback, imgsrc, imgalt, text, link }) => (
   <Tilt>
     <MainCard>
+      <ContentTitle>
+        <CardTitle>{title}</CardTitle>
+        <CardNumber>{titleback}</CardNumber>
+      </ContentTitle>
       <Content>
-        <CardNumber>01</CardNumber>
-        <CardTitle>Card 1</CardTitle>
-        <CardText>
-          Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
-          disputationi eu sit. Vide electram sadipscing et per. Per aumento de
-          cachacis, eu reclamis. Paisis, filhis, espiritis santis. Cevadis im
-          ampola pa arma uma pindureta.
-        </CardText>
-        <CardLink href="#">link</CardLink>
+        <Tilt>
+          {/* <CardImgBox> */}
+          <Image
+            src={imgsrc}
+            alt={imgalt}
+            width={220}
+            height={220}
+            // layout="instrinsic"
+          />
+          {/* </CardImgBox> */}
+        </Tilt>
+        <CardText>{text}</CardText>
+        <CardLink href={link}>Ver Mais</CardLink>
       </Content>
     </MainCard>
   </Tilt>
@@ -38,38 +48,69 @@ const MainCard = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
+  font-size: 3em;
+  text-align: center;
 `;
 
-const Content = styled.div`
-  padding: 20px;
-  text-align: center;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: 0.5s;
+const ContentTitle = styled.div`
+  z-index: 1;
+`;
 
-  :hover {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+const CardTitle = styled.h3`
+  position: absolute;
+  font-size: 1em;
+  color: ${({ theme }) => theme.colors.text.main.color};
+  /* z-index: 1; */
 `;
 
 const CardNumber = styled.h2`
   position: absolute;
-  top: -120px;
+  top: -100px;
   right: 10px;
   font-size: 4em;
   color: rgba(255, 255, 255, 0.05);
   pointer-events: none;
 `;
 
-const CardTitle = styled.h3`
-  font-size: 1.2em;
-  color: ${({ theme }) => theme.colors.text.main.color};
+const Content = styled.div`
   z-index: 1;
+  padding: 60px 20px 20px 20px;
+  text-align: center;
+  /* transform: translateY(100px);
+  opacity: 0; */
+  filter: blur(5px);
+  transition: 0.5s;
+
+  ${MainCard}:hover & {
+    filter: blur(0px);
+  }
+
+  /* :hover {
+    transform: translateY(0px);
+    opacity: 1; */
+  /* } */
 `;
+
+// const CardImgBox = styled.div`
+//   position: relative;
+//   max-width: 360px;
+//   height: 60%;
+// `;
+
+// const CardImg = styled(Image)`
+//   width: 100%;
+//   height: 60%;
+//   filter: blur(2px);
+//   transition: 0.2s;
+
+//   ${MainCard}:hover & {
+//     filter: blur(0px);
+//   }
+// `;
 
 const CardText = styled.p`
   font-size: 0.5em;
@@ -87,6 +128,7 @@ const CardLink = styled.a`
   color: ${({ theme }) => theme.colors.text.main.color};
   border-radius: ${({ theme }) => theme.defaultStyles.borderRadius};
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: 500;
   box-shadow: ${({ theme }) => theme.defaultStyles.boxShadow};
 `;
