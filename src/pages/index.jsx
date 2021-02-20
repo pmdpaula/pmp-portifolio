@@ -24,7 +24,7 @@ const Capa = () => {
       <Box
         flex={1}
         display="flex"
-        flexWrap="wrap"
+        // flexWrap="wrap"
         // flexDirection="column"
         justifyContent="center"
         style={{ zIndex: 1000 }}
@@ -33,9 +33,10 @@ const Capa = () => {
           display="flex"
           // flexWrap='wrap'
           justifyContent="center"
-          alignItems="center"
+          // alignItems="center"
           flexDirection="column"
-          maxWidth={defaultStyles.maxWidth}
+          maxWidth={defaultStyles.contentWidth}
+          style={{ zIndex: 1000 }}
         >
           <FrontText tag="span" variant="hugeTitle" textAlign="center">
             Pedro de Paula
