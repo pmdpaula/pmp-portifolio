@@ -26,22 +26,35 @@ const Btn = styled.div`
 
   :hover {
     ::before {
-      left: -50%;
+      left: -20%;
       bottom: 5px;
       height: 50%;
-      width: 200%;
+      /* width: 200%; */
+      width: 100%;
+      ${breakpointsMedia({
+        sm: css`
+          /* left: 20%; */
+          width: 200%;
+        `,
+      })}
       border-radius: 30px;
-      background: rgba(0, 200, 0, 0.7);
+      background: rgba(0, 255, 0, 1);
       transition-delay: 0.3s;
     }
 
     ::after {
       top: 5px;
-      left: -50%;
+      left: -20%;
       height: 50%;
-      width: 200%;
+      width: 100%;
+      ${breakpointsMedia({
+        sm: css`
+          /* left: 20%; */
+          width: 200%;
+        `,
+      })}
       border-radius: 30px;
-      background: rgba(0, 200, 0, 0.7);
+      background: rgba(0, 255, 0, 1);
       transition-delay: 0.3s;
     }
   }
@@ -49,10 +62,17 @@ const Btn = styled.div`
   ::before {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 10%;
     transform: translate(50%);
     bottom: -5px;
-    width: 100%;
+    width: 70%;
+    ${breakpointsMedia({
+    sm: css`
+        left: 50%;
+        width: 100%;
+      `,
+  })}
+
     height: 10px;
     background: rgba(0, 100, 0, 0.3);
     box-shadow: 0 0 5px rgba(0, 100, 0, 1), 0 0 15px rgba(0, 100, 0, 1),
@@ -65,10 +85,16 @@ const Btn = styled.div`
   ::after {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 10%;
     transform: translate(50%);
     top: -5px;
-    width: 100%;
+    width: 70%;
+    ${breakpointsMedia({
+    sm: css`
+        left: 50%;
+        width: 100%;
+      `,
+  })}
     height: 10px;
     background: rgba(0, 100, 0, 0.3);
     box-shadow: 0 0 5px rgba(0, 100, 0, 1), 0 0 15px rgba(0, 100, 0, 1),
@@ -123,7 +149,13 @@ const LinkBtn = styled.a`
   })}
 
   :hover {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    ${breakpointsMedia({
+      md: css`
+        letter-spacing: 6px;
+      `,
+    })}
+
     &::before {
       transform: skew(45deg) translate(200%);
     }
