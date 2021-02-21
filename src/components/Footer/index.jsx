@@ -33,7 +33,7 @@ const Footer = props => {
         icon={faLinkedin}
         color="background.main"
         tag="a"
-        href="https://github.com/pmdpaula"
+        href="https://www.linkedin.com/in/pmdpaula/"
       />
     </FooterWrapper>
   );
