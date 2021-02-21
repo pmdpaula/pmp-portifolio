@@ -1,12 +1,14 @@
 import { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 import Text from '../foundation/Text';
 import Box from '../foundation/layout/Box';
 import FrontText from '../components/FrontText/FrontText';
 
 import BackgroundAnimation from '../components/BackgroundAnimation';
-import Footer from '../components/Footer';
 
 const Capa = () => {
   const { defaultStyles } = useContext(ThemeContext);
