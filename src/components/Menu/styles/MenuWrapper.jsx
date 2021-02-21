@@ -8,7 +8,7 @@ const MenuWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   max-width: 98%;
   margin: 18px;
   /* margin-top: 18px; */
@@ -40,16 +40,21 @@ MenuWrapper.LeftSide = styled.div`
   /* padding-right: 8px; */
   margin: 0;
   order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
   ${breakpointsMedia({
     xs: css`
-      width: 50px;
-      height: 30px;
+      /* height: 30px; */
     `,
     md: css`
-      width: 131px;
-      height: 36px;
+      width: 250px;
+      /* height: 36px; */
       /* padding-right: 22px; */
       order: initial;
+      justify-content: space-between;
     `,
   })}
 `;

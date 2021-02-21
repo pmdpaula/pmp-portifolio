@@ -4,6 +4,7 @@ import Button from '../Button';
 import MenuWrapper from './styles/MenuWrapper';
 import NeumorphicButton from '../NeumorphicButton';
 import GlassButton from '../GlassButton';
+import FrontText from '../FrontText/FrontText';
 
 export default function Menu() {
   return (
@@ -11,7 +12,10 @@ export default function Menu() {
       <MenuWrapper.LeftSide>
         {' '}
         {/* MenuWrapper.LeftSide */}
-        <Logo />
+        {/* <Logo /> */}
+        <FrontText tag="span" variant="subTitle" textAlign="center">
+          Pedro de Paula
+        </FrontText>
       </MenuWrapper.LeftSide>
       <MenuWrapper.CentralSide>
         {' '}
