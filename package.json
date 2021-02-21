@@ -21,6 +21,7 @@
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
     "react-parallax-tilt": "^1.4.86",
+    "react-tooltip": "^4.2.14",
     "styled-components": "^5.0.0",
     "styled-normalize": "^8.0.7"
   },
