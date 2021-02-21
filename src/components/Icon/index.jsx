@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled, { css } from 'styled-components';
 
 import Box from '../../foundation/layout/Box';
 import Text from '../../foundation/Text/index';

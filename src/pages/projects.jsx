@@ -8,6 +8,49 @@ import Footer from '../components/Footer';
 import BackgroundAnimation from '../components/BackgroundAnimation/index';
 import ProjectCard from '../components/ProjectCard/index';
 
+const cardDB = [
+  {
+    cardTitle: 'Abajur',
+    cardTitleBack: '01',
+    cardImgSrc: '/images/card01.jpg',
+    cardImgAlt: 'Imagem 01',
+    cardText: 'Mussum Ipsum, abajusis',
+    cardLink: '/',
+  },
+  {
+    cardTitle: 'Triangulo',
+    cardTitleBack: '02',
+    cardImgSrc: '/images/card02.jpg',
+    cardImgAlt: 'Imagem 02',
+    cardText: 'Mussum Ipsum, triangulis',
+    cardLink: '#',
+  },
+  {
+    cardTitle: 'Coqueiros',
+    cardTitleBack: '03',
+    cardImgSrc: '/images/card03.jpg',
+    cardImgAlt: 'Imagem 03',
+    cardText: 'Mussum Ipsum, coqueiris',
+    cardLink: '#',
+  },
+  {
+    cardTitle: 'Escrever',
+    cardTitleBack: '04',
+    cardImgSrc: '/images/card04.jpg',
+    cardImgAlt: 'Imagem 04',
+    cardText: 'Mussum Ipsum, escreveris',
+    cardLink: '#',
+  },
+  {
+    cardTitle: 'Teclado',
+    cardTitleBack: '05',
+    cardImgSrc: '/images/card05.jpg',
+    cardImgAlt: 'Imagem 05',
+    cardText: 'Mussum Ipsum, tecladus',
+    cardLink: '#',
+  },
+];
+
 const Projects = () => {
   const { defaultStyles } = useContext(ThemeContext);
 
@@ -60,46 +103,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-const cardDB = [
-  {
-    cardTitle: 'Abajur',
-    cardTitleBack: '01',
-    cardImgSrc: '/images/card01.jpg',
-    cardImgAlt: 'Imagem 01',
-    cardText: 'Mussum Ipsum, abajusis',
-    cardLink: '/',
-  },
-  {
-    cardTitle: 'Triangulo',
-    cardTitleBack: '02',
-    cardImgSrc: '/images/card02.jpg',
-    cardImgAlt: 'Imagem 02',
-    cardText: 'Mussum Ipsum, triangulis',
-    cardLink: '#',
-  },
-  {
-    cardTitle: 'Coqueiros',
-    cardTitleBack: '03',
-    cardImgSrc: '/images/card03.jpg',
-    cardImgAlt: 'Imagem 03',
-    cardText: 'Mussum Ipsum, coqueiris',
-    cardLink: '#',
-  },
-  {
-    cardTitle: 'Escrever',
-    cardTitleBack: '04',
-    cardImgSrc: '/images/card04.jpg',
-    cardImgAlt: 'Imagem 04',
-    cardText: 'Mussum Ipsum, escreveris',
-    cardLink: '#',
-  },
-  {
-    cardTitle: 'Teclado',
-    cardTitleBack: '05',
-    cardImgSrc: '/images/card05.jpg',
-    cardImgAlt: 'Imagem 05',
-    cardText: 'Mussum Ipsum, tecladus',
-    cardLink: '#',
-  },
-];

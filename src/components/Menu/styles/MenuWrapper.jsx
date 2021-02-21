@@ -1,34 +1,23 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
-import { TextStyleVariants } from '../../../foundation/Text';
 
 const MenuWrapper = styled.nav`
-  /* font-family: 'Roboto', sans-serif; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 98%;
   margin: 18px;
-  /* margin-top: 18px; */
-  /* padding-left: 28px;
-  padding-right: 28px; */
   ${breakpointsMedia({
     md: css`
       margin-top: 24px;
-      /* margin-left: auto;
-      margin-right: auto; */
-      /* width: 100%; */
-      /* padding: 0 16px; */
       max-width: 700px;
     `,
     lg: css`
-      /* max-width: 85%; */
-      /* max-width: 1160px; */
+      max-width: 1160px;
     `,
     xl: css`
-      /* max-width: 65%; */
       max-width: 1222px;
     `,
   })};
@@ -37,7 +26,6 @@ const MenuWrapper = styled.nav`
 export default MenuWrapper;
 
 MenuWrapper.LeftSide = styled.div`
-  /* padding-right: 8px; */
   margin: 0;
   order: 1;
   display: flex;
@@ -46,13 +34,8 @@ MenuWrapper.LeftSide = styled.div`
   width: 100%;
 
   ${breakpointsMedia({
-    xs: css`
-      /* height: 30px; */
-    `,
     md: css`
       width: 250px;
-      /* height: 36px; */
-      /* padding-right: 22px; */
       order: initial;
       justify-content: space-between;
     `,
@@ -78,17 +61,6 @@ MenuWrapper.CentralSide = styled.div`
   border-bottom: 1px solid #88989e; */
   /* padding: 12px; */
 
-  /* ${breakpointsMedia({
-    xs: css`
-      padding: 8px 18px;
-      border-radius: ${borderXs};
-    `,
-    md: css`
-      padding: 15px 30px;
-      border-radius: ${borderMd};
-    `,
-  })} */
-
   ${breakpointsMedia({
     xs: css`
       /* max-width: 90%; */
@@ -103,29 +75,7 @@ MenuWrapper.CentralSide = styled.div`
     lg: css`
       max-width: 900px;
     `,
-  })}/* a { */
-    /* text-align: center;
-    display: block;
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.text.head2.color}; */
-    /* transition: 200ms ease-in-out; */
-    /* background: rgba(45, 59, 41, 0.219); */
-    /* padding: 6px 16px; */
-
-    /* ${breakpointsMedia({
-    xs: css`
-      ${TextStyleVariants.smallestException}
-    `,
-    md: css`
-      ${TextStyleVariants.paragraph1}
-    `,
-  })} */
-    /* &:hover,
-    &:focus {
-      font-weight: 500;
-      color: #070c0e;
-    } */
-  /* } */
+  })}
 `;
 
 MenuWrapper.RightSide = styled.div`
