@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled, { css, ThemeContext } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import Logo from '../../theme/Logo';
 import { GitHub, Linkedin } from '../../assets/logos';
@@ -21,20 +22,24 @@ const Footer = props => {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <Icon
-        width="3em"
-        icon={faGithubAlt}
-        color="background.main"
-        tag="a"
-        href="https://github.com/pmdpaula"
-      />
-      <Icon
-        width="3em"
-        icon={faLinkedin}
-        color="background.main"
-        tag="a"
-        href="https://github.com/pmdpaula"
-      />
+      <Tooltip title="GitHub">
+        <Icon
+          width="3em"
+          icon={faGithubAlt}
+          color="background.main"
+          tag="a"
+          href="https://github.com/pmdpaula"
+        />
+      </Tooltip>
+      <Tooltip title="LinkedIn">
+        <Icon
+          width="3em"
+          icon={faLinkedin}
+          color="background.main"
+          tag="a"
+          href="https://github.com/pmdpaula"
+        />
+      </Tooltip>
     </FooterWrapper>
   );
 };
