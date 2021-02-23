@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
 
 import Box from '../../foundation/layout/Box';
@@ -12,7 +11,7 @@ const Icon = ({ icon, width, tag, href, color }) => (
       color={color}
       style={{ textShadow: 'rgba(0, 0, 0, 0.5)' }}
     >
-      <FontAwesomeIcon icon={icon} />
+      <icon />
     </Text>
   </Box>
 );

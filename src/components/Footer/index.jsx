@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import styled, { css, ThemeContext } from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Tooltip from '@material-ui/core/Tooltip';
+// import Tooltip from '@material-ui/core/Tooltip';
+// import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import ReactTooltip from 'react-tooltip';
+
+import * as FaIcons from 'react-icons/fa';
 
 import Logo from '../../theme/Logo';
-import { GitHub, Linkedin } from '../../assets/logos';
+// import { GitHub, Linkedin } from '../../assets/logos';
 
 import Box from '../../foundation/layout/Box';
 import breakpointsMedia from '../../theme/utils/breakpointsMedia';
@@ -17,29 +19,60 @@ import Text from '../../foundation/Text';
 // import { Linkedin } from '../../assets/logos/LinkedIn';
 import Icon from '../Icon/index';
 
+// const tema = createMuiTheme({
+//   overrides: {
+//     // Style sheet name ⚛️
+//     MuiTooltip: {
+//       // Name of the rule
+//       tooltipArrow: {
+//         // Some CSS
+//         color: 'red',
+//       },
+//       tooltip: {
+//         // Some CSS
+//         color: 'red',
+//       },
+//     },
+//   },
+// });
+
 const Footer = props => {
-  const { colors } = useContext(ThemeContext);
+  const { colors, title } = useContext(ThemeContext);
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <Tooltip title="GitHub">
-        <Icon
-          width="3em"
-          icon={faGithubAlt}
+      <ReactTooltip
+        type={title === 'dark' ? 'light' : 'dark'}
+        effect="solid"
+        delayHide={300}
+        border
+        borderColor={colors.borders.main.color}
+        arrowColor={colors.borders.main.color}
+      />
+      <Text
+        color="background.main"
+        tag="a"
+        href="https://github.com/pmdpaula"
+        variant="title"
+        style={{ padding: '0 9px' }}
+      >
+        <span data-tip="GitHub">
+          <FaIcons.FaGithubAlt />
+        </span>
+      </Text>
+
+      <span>
+        <Text
           color="background.main"
           tag="a"
-          href="https://github.com/pmdpaula"
-        />
-      </Tooltip>
-      <Tooltip title="LinkedIn">
-        <Icon
-          width="3em"
-          icon={faLinkedin}
-          color="background.main"
-          tag="a"
-          href="https://github.com/pmdpaula"
-        />
-      </Tooltip>
+          href="https://www.linkedin.com/in/pmdpaula/"
+          variant="title"
+          style={{ padding: '0 9px' }}
+          data-tip="LinkedIn"
+        >
+          <FaIcons.FaLinkedin />
+        </Text>
+      </span>
     </FooterWrapper>
   );
 };
