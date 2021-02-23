@@ -1,29 +1,52 @@
-import styled, { css } from 'styled-components';
-import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useContext } from 'react';
+import styled, { css, ThemeContext } from 'styled-components';
+import ReactTooltip from 'react-tooltip';
+
+import * as FaIcons from 'react-icons/fa';
 
 import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+import Text from '../../foundation/Text/index';
 
-import Icon from '../Icon/index';
+const Footer = props => {
+  const { colors, title } = useContext(ThemeContext);
+  return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <FooterWrapper {...props}>
+      <ReactTooltip
+        type={title === 'dark' ? 'light' : 'dark'}
+        effect="solid"
+        delayHide={300}
+        border
+        borderColor={colors.borders.main.color}
+        arrowColor={colors.borders.main.color}
+      />
+      <Text
+        color="background.main"
+        tag="a"
+        href="https://github.com/pmdpaula"
+        variant="title"
+        style={{ padding: '0 9px' }}
+      >
+        <span data-tip="GitHub">
+          <FaIcons.FaGithubAlt />
+        </span>
+      </Text>
 
-const Footer = props => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <FooterWrapper {...props}>
-    <Icon
-      width="3em"
-      icon={faGithubAlt}
-      color="background.main"
-      tag="a"
-      href="https://github.com/pmdpaula"
-    />
-    <Icon
-      width="3em"
-      icon={faLinkedin}
-      color="background.main"
-      tag="a"
-      href="https://www.linkedin.com/in/pmdpaula/"
-    />
-  </FooterWrapper>
-);
+      <span>
+        <Text
+          color="background.main"
+          tag="a"
+          href="https://www.linkedin.com/in/pmdpaula/"
+          variant="title"
+          style={{ padding: '0 9px' }}
+          data-tip="LinkedIn"
+        >
+          <FaIcons.FaLinkedin />
+        </Text>
+      </span>
+    </FooterWrapper>
+  );
+};
 
 export default Footer;
 
