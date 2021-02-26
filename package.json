@@ -20,7 +20,7 @@
     "react-anime": "^3.0.3",
     "react-dom": "^16.8.0",
     "react-is": "^17.0.1",
-    "react-parallax-tilt": "^1.4.86",
+    "react-parallax-tilt": "^1.4.90",
     "styled-components": "^5.0.0",
     "styled-normalize": "^8.0.7"
   },
