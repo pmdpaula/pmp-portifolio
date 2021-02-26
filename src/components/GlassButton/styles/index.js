@@ -20,6 +20,10 @@ export const Btn = styled.div`
       ${breakpointsMedia({
         sm: css`
           /* left: 20%; */
+          width: 180%;
+        `,
+        md: css`
+          /* left: 20%; */
           width: 200%;
         `,
       })}
@@ -35,6 +39,10 @@ export const Btn = styled.div`
       width: 100%;
       ${breakpointsMedia({
         sm: css`
+          /* left: 20%; */
+          width: 180%;
+        `,
+        md: css`
           /* left: 20%; */
           width: 200%;
         `,

@@ -51,7 +51,7 @@ MenuWrapper.CentralSide = styled.div`
   margin: 0;
   order: 3;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   list-style: none;
   display: flex;
   align-items: center;
@@ -70,7 +70,7 @@ MenuWrapper.CentralSide = styled.div`
       flex: 1;
       order: initial;
       border: none;
-      margin: 0;
+      /* margin: 0; */
     `,
     lg: css`
       max-width: 900px;

@@ -31,7 +31,7 @@
     // No need to import React when using Next.js
     "react/react-in-jsx-scope": "off",
 
-    "prettier/prettier": ["error"],
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "space-before-function-paren": "off",
     "object-curly-newline": "off",
     "comma-dangle": "off",

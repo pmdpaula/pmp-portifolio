@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styled, { css, ThemeContext } from 'styled-components';
 import ReactTooltip from 'react-tooltip';
 
@@ -8,42 +8,48 @@ import breakpointsMedia from '../../theme/utils/breakpointsMedia';
 import Text from '../../foundation/Text/index';
 
 const Footer = props => {
+  const [isMounted, setIsMounted] = useState(false);
+
   const { colors, title } = useContext(ThemeContext);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      <ReactTooltip
-        type={title === 'dark' ? 'light' : 'dark'}
-        effect="solid"
-        delayHide={300}
-        border
-        borderColor={colors.borders.main.color}
-        arrowColor={colors.borders.main.color}
-      />
+      {isMounted && (
+        <ReactTooltip
+          type={title === 'dark' ? 'light' : 'dark'}
+          effect="solid"
+          delayHide={300}
+          border
+          borderColor={colors.borders.main.color}
+          arrowColor={colors.borders.main.color}
+        />
+      )}
       <Text
         color="background.main"
         tag="a"
         href="https://github.com/pmdpaula"
         variant="title"
         style={{ padding: '0 9px' }}
+        data-tip="GitHub"
       >
-        <span data-tip="GitHub">
-          <FaIcons.FaGithubAlt />
-        </span>
+        <FaIcons.FaGithubAlt />
       </Text>
 
-      <span>
-        <Text
-          color="background.main"
-          tag="a"
-          href="https://www.linkedin.com/in/pmdpaula/"
-          variant="title"
-          style={{ padding: '0 9px' }}
-          data-tip="LinkedIn"
-        >
-          <FaIcons.FaLinkedin />
-        </Text>
-      </span>
+      <Text
+        color="background.main"
+        tag="a"
+        href="https://www.linkedin.com/in/pmdpaula/"
+        variant="title"
+        style={{ padding: '0 9px' }}
+        data-tip="LinkedIn"
+      >
+        <FaIcons.FaLinkedin />
+      </Text>
     </FooterWrapper>
   );
 };
