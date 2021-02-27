@@ -13,7 +13,7 @@ const breakpointsMedia = cssByBreakpoint => {
         @media only screen and (min-width: ${breakpoints[breakpointName]}px) {
           ${cssByBreakpoint[breakpointName]}
         }
-      `
+      `,
     );
 };
 

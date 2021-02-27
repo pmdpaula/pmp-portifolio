@@ -5,6 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "prettier": "prettier --check --ignore-path .gitignore .",
     "lint": "eslint --ignore-path .gitignore .",
     "custom-script": "node ./script-test.js"
   },
@@ -34,7 +35,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1",
+    "prettier": "2.2.1",
     "shelljs": "^0.8.4"
   },
   "license": "MIT"

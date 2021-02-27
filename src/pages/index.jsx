@@ -1,11 +1,11 @@
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
 import Text from '../foundation/Text';
 import Box from '../foundation/layout/Box';
 import FrontText from '../components/FrontText/FrontText';
 
-import BackgroundAnimation from '../components/BackgroundAnimation';
+import BackgroundAnimation from '../components/BackgroundAnimations';
 
 const Capa = () => {
   const { defaultStyles } = useContext(ThemeContext);
