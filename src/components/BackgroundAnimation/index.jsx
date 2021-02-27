@@ -47,11 +47,9 @@ const BackgroundAnimation = ({
         delay={(el, index) => (index * duration) / 100}
         scale={[1, 5]}
         translateX={() =>
-          // eslint-disable-next-line implicit-arrow-linebreak
           anime.random(calculateDispersion() * -1, calculateDispersion())
         }
         translateY={() =>
-          // eslint-disable-next-line implicit-arrow-linebreak
           anime.random(calculateDispersion() / -2, calculateDispersion() / 2)
         }
         // rotate={anime.stagger([-360, 360])}
@@ -69,10 +67,14 @@ BackgroundAnimation.propTypes = {
   duration: PropTypes.number.isRequired,
   direction: PropTypes.oneOf(['normal', 'reverse', 'alternate']).isRequired,
   loop: PropTypes.bool,
+  easing: PropTypes.string,
+  dispersion: PropTypes.number,
 };
 
 BackgroundAnimation.defaultProps = {
   loop: false,
+  easing: 'linear',
+  dispersion: 500,
 };
 
 const Container = styled.div`
