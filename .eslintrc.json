@@ -34,7 +34,7 @@
 
       "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
       // "space-before-function-paren": "off",
-      // "object-curly-newline": "off",
+      "object-curly-newline": "off",
       "implicit-arrow-linebreak": "off",
       // "comma-dangle": "off",
       "arrow-parens": "off"
