@@ -16,8 +16,8 @@ const Capa = () => {
       <BackgroundAnimation
         numberOfBlocks={50}
         duration={3000}
-        direction="alternate"
         loop
+        direction="alternate"
         easing="easeInOutBack"
         dispersion={500}
       />
