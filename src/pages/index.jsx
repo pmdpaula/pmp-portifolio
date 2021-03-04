@@ -17,6 +17,7 @@ const Capa = () => {
         loop
         numberOfBlocks={50}
         duration={3000}
+        loop
         direction="alternate"
         easing="easeInOutBack"
         dispersion={500}
