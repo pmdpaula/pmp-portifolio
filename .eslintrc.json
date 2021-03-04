@@ -22,7 +22,7 @@
     ],
       "rules": {
       // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
 
       // We will use TypeScript's types for component props instead
       // "react/prop-types": "off",
@@ -34,7 +34,7 @@
 
       "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
       // "space-before-function-paren": "off",
-      // "object-curly-newline": "off",
+      "object-curly-newline": "off",
       "implicit-arrow-linebreak": "off",
       // "comma-dangle": "off",
       "arrow-parens": "off"
