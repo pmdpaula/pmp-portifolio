@@ -22,7 +22,7 @@
     ],
       "rules": {
       // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
 
       // We will use TypeScript's types for component props instead
       // "react/prop-types": "off",
