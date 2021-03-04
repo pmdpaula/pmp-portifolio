@@ -18,21 +18,9 @@ const Text = ({ variant, children, tag, ...props }) => (
 
 export default Text;
 
-const paragraph1 = css`
-  ${({ theme }) => css`
-    font-size: ${theme.typographyVariants.paragraph1.fontSize};
-    font-weight: ${theme.typographyVariants.paragraph1.fontWeight};
-    line-height: ${theme.typographyVariants.paragraph1.lineHeight};
-  `}
-`;
+// const paragraph1 = ;
 
-const smallestException = css`
-  ${({ theme }) => css`
-    font-size: ${theme.typographyVariants.smallestException.fontSize};
-    font-weight: ${theme.typographyVariants.smallestException.fontWeight};
-    line-height: ${theme.typographyVariants.smallestException.lineHeight};
-  `}
-`;
+// const smallestException = ;
 
 /* const buttonText = css`
   ${({ theme }) => css`
@@ -43,8 +31,20 @@ const smallestException = css`
 ` */
 
 export const TextStyleVariants = {
-  smallestException,
-  paragraph1,
+  smallestException: css`
+    ${({ theme }) => css`
+      font-size: ${theme.typographyVariants.smallestException.fontSize};
+      font-weight: ${theme.typographyVariants.smallestException.fontWeight};
+      line-height: ${theme.typographyVariants.smallestException.lineHeight};
+    `}
+  `,
+  paragraph1: css`
+    ${({ theme }) => css`
+      font-size: ${theme.typographyVariants.paragraph1.fontSize};
+      font-weight: ${theme.typographyVariants.paragraph1.fontWeight};
+      line-height: ${theme.typographyVariants.paragraph1.lineHeight};
+    `}
+  `,
   buttonText: css`
     ${({ theme }) => css`
       font-size: ${theme.typographyVariants.buttonTextXS.fontSize};
@@ -139,7 +139,18 @@ Text.defaultProps = {
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
-  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span']),
+  tag: PropTypes.oneOf([
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'p',
+    'li',
+    'a',
+    'span',
+    'ul',
+  ]),
   variant: PropTypes.oneOf([
     'hugeTitle',
     'title',
