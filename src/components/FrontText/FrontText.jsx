@@ -1,5 +1,6 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components';
+import { PropTypes } from 'prop-types';
 import breakpointsMedia from '../../theme/utils/breakpointsMedia';
 
 import Text from '../../foundation/Text';
@@ -67,3 +68,34 @@ const FrontText = ({ tag, variant, textAlign, ...props }) => (
 );
 
 export default FrontText;
+
+FrontText.defaultProps = {
+  tag: 'span',
+  variant: 'paragraph1',
+};
+
+FrontText.propTypes = {
+  children: PropTypes.node.isRequired,
+  textAlign: PropTypes.string.isRequired,
+  tag: PropTypes.oneOf([
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'p',
+    'li',
+    'a',
+    'span',
+    'ul',
+  ]),
+  variant: PropTypes.oneOf([
+    'hugeTitle',
+    'title',
+    'subTitle',
+    'paragraph1',
+    'paragraph2',
+    'smallestException',
+    'buttonText',
+  ]),
+};

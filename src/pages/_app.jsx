@@ -1,8 +1,10 @@
+/* eslint-disable react/forbid-prop-types */
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import Head from 'next/head';
 
+import { PropTypes } from 'prop-types';
 import GlobalStyle from '../theme/GlobalStyle';
 import ThemeLight from '../theme/light';
 import ThemeDark from '../theme/dark';
@@ -29,3 +31,8 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
