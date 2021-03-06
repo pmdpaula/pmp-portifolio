@@ -1,5 +1,6 @@
 import Tilt from 'react-parallax-tilt';
 import Image from 'next/image';
+import { PropTypes } from 'prop-types';
 import ProjectCardWrapper from './styles/ProjectCardWrapper';
 
 const ProjectCard = ({ title, titleback, imgsrc, imgalt, text, link }) => (
@@ -37,3 +38,12 @@ const ProjectCard = ({ title, titleback, imgsrc, imgalt, text, link }) => (
 // };
 
 export default ProjectCard;
+
+ProjectCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  titleback: PropTypes.string.isRequired,
+  imgsrc: PropTypes.string.isRequired,
+  imgalt: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+};
