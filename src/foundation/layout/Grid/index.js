@@ -135,6 +135,14 @@ const Grid = {
     /* margin-right: -16px;
     margin-left: -16px; */
   `,
+  RowModal: styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 12em;
+    /* margin-right: -16px;
+    margin-left: -16px; */
+  `,
   Col,
 
   /* Col: styled.div`

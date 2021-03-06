@@ -25,7 +25,7 @@ const Button = styled.button`
   font-weight: bold;
   opacity: 1;
   transition: opacity ${({ theme }) => theme.transition};
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.defaultStyles.borderRadius};
 
   ${breakpointsMedia({
     xs: css`
@@ -43,6 +43,16 @@ const Button = styled.button`
   &:focus {
     opacity: 0.5;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+  }
+  ${({ fullWidth }) =>
+    fullWidth &&
+    css`
+      width: 100%;
+    `};
 
   ${propToStyle('margin')}
   ${propToStyle('display')}
