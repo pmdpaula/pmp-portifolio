@@ -14,10 +14,10 @@ const Capa = () => {
   return (
     <>
       <BackgroundAnimation
+        loop
         numberOfBlocks={50}
         duration={3000}
         direction="alternate"
-        loop
         easing="easeInOutBack"
         dispersion={500}
       />
