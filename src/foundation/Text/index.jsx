@@ -135,10 +135,11 @@ const TextBase = styled.span`
 Text.defaultProps = {
   tag: 'span',
   variant: 'paragraph1',
+  children: null,
 };
 
 Text.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   tag: PropTypes.oneOf([
     'h1',
     'h2',
@@ -150,6 +151,7 @@ Text.propTypes = {
     'a',
     'span',
     'ul',
+    'input',
   ]),
   variant: PropTypes.oneOf([
     'hugeTitle',

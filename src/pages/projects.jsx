@@ -69,7 +69,7 @@ const Projects = () => {
         flexWrap="wrap"
         flexDirection="column"
         justifyContent="center"
-        style={{ zIndex: 1000 }}
+        // style={{ zIndex: 0 }}
         maxWidth={defaultStyles.contentWidth}
       >
         <Menu />
