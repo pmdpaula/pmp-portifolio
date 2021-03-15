@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { ThemeContext } from 'styled-components';
-import Button from '../../Button';
+import Button from '../../commons/Button';
 import TextField from '../../forms/TextField';
 import Box from '../../../foundation/layout/Box';
 import Grid from '../../../foundation/layout/Grid';
@@ -56,10 +56,10 @@ function FormContent() {
         setIsFormSubmited(true);
 
         // Data Transfer Object
-        const userDTO = {
-          username: userInfo.usuario,
-          name: userInfo.nome,
-        };
+        // const userDTO = {
+        //   username: userInfo.usuario,
+        //   name: userInfo.nome,
+        // };
 
         throwDiceSubmit();
 

@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
-import Box from '../../foundation/layout/Box';
-import Text from '../../foundation/Text/index';
+import Box from '../../../foundation/layout/Box';
+import Text from '../../../foundation/Text/index';
 
 const Icon = ({ icon, width, tag, href, color }) => (
   <Box width={width} style={{ margin: '0 .5em' }}>

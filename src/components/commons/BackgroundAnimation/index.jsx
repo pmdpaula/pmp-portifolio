@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components';
 import Anime, { anime } from 'react-anime';
 
 import { PropTypes } from 'prop-types';
-import useWindowSize from '../../foundation/hooks/useWindowSize';
+import useWindowSize from '../../../foundation/hooks/useWindowSize';
 
-import breakpointsMedia from '../../theme/utils/breakpointsMedia';
-import { breakpoints } from '../../theme/index';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import { breakpoints } from '../../../theme/index';
 
 // https://www.youtube.com/watch?v=XMhHEVznWEY
 const BackgroundAnimation = ({

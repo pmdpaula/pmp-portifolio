@@ -4,8 +4,8 @@ import { ThemeContext } from 'styled-components';
 import MenuWrapper from './styles/MenuWrapper';
 
 import GlassButton from '../GlassButton';
-import FrontText from '../FrontText/FrontText';
-import FormCadastro from '../patterns/FormCadastro/index';
+import FrontText from '../../FrontText/FrontText';
+import FormCadastro from '../../patterns/FormCadastro/index';
 import Modal from '../Modal/index';
 
 const Menu = () => {
