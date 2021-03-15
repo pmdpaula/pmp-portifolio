@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
+import SEO from '../components/commons/SEO/index';
 import Box from '../foundation/layout/Box';
 import Grid from '../foundation/layout/Grid';
 import Menu from '../components/Menu';
@@ -56,6 +57,8 @@ const Projects = () => {
 
   return (
     <>
+      <SEO headTitle="Projetos" />
+
       <BackgroundAnimation
         numberOfBlocks={30}
         duration={20}

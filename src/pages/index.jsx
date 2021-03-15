@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
-// import { useContext } from 'react';
+import SEO from '../components/commons/SEO/index';
 import Text from '../foundation/Text';
 import Box from '../foundation/layout/Box';
 import FrontText from '../components/FrontText/FrontText';
@@ -13,6 +13,8 @@ const Capa = () => {
 
   return (
     <>
+      <SEO headTitle="Home" />
+
       <BackgroundAnimation
         loop
         numberOfBlocks={50}
