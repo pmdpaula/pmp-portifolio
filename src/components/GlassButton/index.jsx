@@ -1,5 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { Btn } from './styles/index';
+import { Link } from '../Link/index';
 
 // https://youtu.be/YrOq7OpRV8I
 
@@ -9,20 +10,26 @@ const GlassButton = ({
   setIsModalState,
   isModalOpen,
   otherColor,
-}) => (
-  <Btn
-    otherColor={otherColor}
-    onClick={() => {
-      setIsModalState(!isModalOpen); // novo state sendo atribuido
-    }}
-  >
-    {href ? (
-      <Btn.Link href={href}>{children}</Btn.Link>
-    ) : (
-      <Btn.NotLink>{children}</Btn.NotLink>
-    )}
-  </Btn>
-);
+}) => {
+  const isLink = Boolean(href);
+  const componentTag = isLink ? Link : 'button';
+
+  return (
+    <Btn otherColor={otherColor}>
+      {href ? (
+        <Btn.Link href={href}>{children}</Btn.Link>
+      ) : (
+        <Btn.NotLink
+          onClick={() => {
+            setIsModalState(!isModalOpen); // novo state sendo atribuido
+          }}
+        >
+          {children}
+        </Btn.NotLink>
+      )}
+    </Btn>
+  );
+};
 
 export default GlassButton;
 

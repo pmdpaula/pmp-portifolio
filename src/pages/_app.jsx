@@ -1,10 +1,9 @@
 /* eslint-disable react/forbid-prop-types */
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { PropTypes } from 'prop-types';
 
 import Head from 'next/head';
-
-import { PropTypes } from 'prop-types';
 import GlobalStyle from '../theme/GlobalStyle';
 import ThemeLight from '../theme/light';
 import ThemeDark from '../theme/dark';

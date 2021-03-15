@@ -63,7 +63,7 @@ function FormContent() {
 
         throwDiceSubmit();
 
-        // fetch('https://instalura-api.vercel.app/api/users', {
+        // fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
         //   method: 'POST',
         //   headers: {
         //     'Content-Type': 'application/json',
@@ -98,7 +98,8 @@ function FormContent() {
         color="tertiary.light"
         marginBottom="32px"
       >
-        Cadastr-se para receber as novidades dos projetos desenvolvidos por mim.
+        Cadastre-se para receber as novidades dos projetos desenvolvidos por
+        mim.
       </Text>
 
       <div>

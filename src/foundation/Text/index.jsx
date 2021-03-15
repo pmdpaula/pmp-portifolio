@@ -4,31 +4,36 @@ import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import propToStyle from '../../theme/utils/propToStyle';
 import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+import { Link } from '../../components/Link/index';
 
-const Text = ({ variant, children, tag, ...props }) => (
-  <TextBase
-    as={tag}
-    variant={variant}
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    {...props}
-  >
-    {children}
-  </TextBase>
-);
+const Text = ({ variant, children, tag, href, ...props }) => {
+  if (href) {
+    return (
+      <TextBase
+        as={Link}
+        variant={variant}
+        href={href}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      >
+        {children}
+      </TextBase>
+    );
+  }
+
+  return (
+    <TextBase
+      as={tag}
+      variant={variant}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    >
+      {children}
+    </TextBase>
+  );
+};
 
 export default Text;
-
-// const paragraph1 = ;
-
-// const smallestException = ;
-
-/* const buttonText = css`
-  ${({ theme }) => css`
-    font-size: ${theme.typographyVariants.buttonText.fontSize};
-    font-weight: ${theme.typographyVariants.buttonText.fontWeight};
-    line-height: ${theme.typographyVariants.buttonText.lineHeight};
-  `}
-` */
 
 export const TextStyleVariants = {
   smallestException: css`
@@ -136,10 +141,12 @@ Text.defaultProps = {
   tag: 'span',
   variant: 'paragraph1',
   children: null,
+  href: '',
 };
 
 Text.propTypes = {
   children: PropTypes.node,
+  href: PropTypes.string,
   tag: PropTypes.oneOf([
     'h1',
     'h2',

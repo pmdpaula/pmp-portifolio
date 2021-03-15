@@ -8,7 +8,7 @@ import FrontText from '../FrontText/FrontText';
 import FormCadastro from '../patterns/FormCadastro/index';
 import Modal from '../Modal/index';
 
-export default function Menu() {
+const Menu = () => {
   const [isModalOpen, setIsModalState] = useState(false);
 
   const { colors } = useContext(ThemeContext);
@@ -63,4 +63,6 @@ export default function Menu() {
       </MenuWrapper>
     </header>
   );
-}
+};
+
+export default Menu;
