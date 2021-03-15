@@ -1,3 +1,4 @@
+import SEO from '../components/commons/SEO/index';
 import Text from '../foundation/Text';
 import Box from '../foundation/layout/Box';
 import Grid from '../foundation/layout/Grid';
@@ -10,6 +11,8 @@ export default function Home() {
 
   return (
     <>
+      <SEO headTitle="Sobre" />
+
       <BackgroundAnimation
         numberOfBlocks={30}
         duration={20}
