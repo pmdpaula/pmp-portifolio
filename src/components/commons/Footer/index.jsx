@@ -4,8 +4,8 @@ import ReactTooltip from 'react-tooltip';
 
 import * as FaIcons from 'react-icons/fa';
 
-import breakpointsMedia from '../../theme/utils/breakpointsMedia';
-import Text from '../../foundation/Text/index';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import Text from '../../../foundation/Text';
 
 const Footer = props => {
   const [isMounted, setIsMounted] = useState(false);

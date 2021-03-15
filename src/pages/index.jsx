@@ -1,28 +1,19 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
+import websitePageHOC from '../components/wrappers/WebsitePage/hoc';
 
-import SEO from '../components/commons/SEO/index';
 import Text from '../foundation/Text';
+// import { WebsitePageContext } from '../components/wrappers/WebsitePage';
 import Box from '../foundation/layout/Box';
+
 import FrontText from '../components/FrontText/FrontText';
 
-import BackgroundAnimation from '../components/BackgroundAnimation';
-
 const Capa = () => {
+  // const websitePageContext = useContext(WebsitePageContext);
   const { defaultStyles } = useContext(ThemeContext);
 
   return (
     <>
-      <SEO headTitle="Home" />
-
-      <BackgroundAnimation
-        loop
-        numberOfBlocks={50}
-        duration={3000}
-        direction="alternate"
-        easing="easeInOutBack"
-        dispersion={500}
-      />
       <Box
         flex={1}
         display="flex"
@@ -60,4 +51,18 @@ const Capa = () => {
   );
 };
 
-export default Capa;
+export default websitePageHOC(Capa, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Home',
+    },
+    bgAnimationProps: {
+      loop: true,
+      numberOfBlocks: 50,
+      duration: 3000,
+      direction: 'alternate',
+      easing: 'easeInOutBack',
+      dispersion: 500,
+    },
+  },
+});

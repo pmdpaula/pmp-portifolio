@@ -1,13 +1,10 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
-import SEO from '../components/commons/SEO/index';
 import Box from '../foundation/layout/Box';
 import Grid from '../foundation/layout/Grid';
-import Menu from '../components/Menu';
-import Footer from '../components/Footer';
-import BackgroundAnimation from '../components/BackgroundAnimation/index';
 import ProjectCard from '../components/ProjectCard/index';
+import websitePageHOC from '../components/wrappers/WebsitePage/hoc';
 
 const cardDB = [
   {
@@ -52,30 +49,21 @@ const cardDB = [
   },
 ];
 
-const Projects = () => {
+const ProjectsPage = () => {
   const { defaultStyles } = useContext(ThemeContext);
+  const numberOfBlocksBg = 30;
 
   return (
     <>
-      <SEO headTitle="Projetos" />
-
-      <BackgroundAnimation
-        numberOfBlocks={30}
-        duration={20}
-        direction="normal"
-        easing="linear"
-        dispersion={400}
-      />
       <Box
         flex={1}
         display="flex"
         flexWrap="wrap"
         flexDirection="column"
         justifyContent="center"
-        // style={{ zIndex: 0 }}
+        style={{ zIndex: { numberOfBlocksBg } + 10 }}
         maxWidth={defaultStyles.contentWidth}
       >
-        <Menu />
         <Grid.Col display="flex" justifyContent="center" alignItems="center">
           <Box
             display="flex"
@@ -99,10 +87,22 @@ const Projects = () => {
             })}
           </Box>
         </Grid.Col>
-        <Footer />
       </Box>
     </>
   );
 };
 
-export default Projects;
+export default websitePageHOC(ProjectsPage, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Projetos',
+    },
+    bgAnimationProps: {
+      numberOfBlocks: 30,
+      duration: 20,
+      direction: 'normal',
+      easing: 'linear',
+      dispersion: 400,
+    },
+  },
+});

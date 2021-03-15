@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { Btn } from './styles/index';
-import { Link } from '../Link/index';
+// import Link from '../Link/index';
 
 // https://youtu.be/YrOq7OpRV8I
 
@@ -12,11 +12,11 @@ const GlassButton = ({
   otherColor,
 }) => {
   const isLink = Boolean(href);
-  const componentTag = isLink ? Link : 'button';
+  // const componentTag = isLink ? Link : 'button';
 
   return (
     <Btn otherColor={otherColor}>
-      {href ? (
+      {isLink ? (
         <Btn.Link href={href}>{children}</Btn.Link>
       ) : (
         <Btn.NotLink

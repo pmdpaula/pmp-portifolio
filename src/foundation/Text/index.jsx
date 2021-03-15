@@ -4,7 +4,7 @@ import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import propToStyle from '../../theme/utils/propToStyle';
 import breakpointsMedia from '../../theme/utils/breakpointsMedia';
-import { Link } from '../../components/Link/index';
+import Link from '../../components/commons/Link/index';
 
 const Text = ({ variant, children, tag, href, ...props }) => {
   if (href) {

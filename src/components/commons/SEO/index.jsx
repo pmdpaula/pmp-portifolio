@@ -3,11 +3,14 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 const SEO = ({ headTitle }) => {
-  const pageTitleDefault = process.env.NEXT_PUBLIC_TITLE_PAGE;
+  const baseTitle = process.env.NEXT_PUBLIC_TITLE_PAGE;
   const hasHeadTitle = Boolean(headTitle);
-  const title = hasHeadTitle
-    ? `${headTitle} | ${pageTitleDefault}`
-    : pageTitleDefault;
+  const title = hasHeadTitle ? `${headTitle} | ${baseTitle}` : baseTitle;
+
+  const description =
+    'Portifólios de projetos Web desenvolvidos por Pedro de Paula';
+  const image = '/images/seo.jpg';
+  const urlBase = 'https://portifolio-pmdpaula.vercel.app/';
 
   return (
     <Head>
@@ -15,34 +18,17 @@ const SEO = ({ headTitle }) => {
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta
-        property="og:url"
-        content="https://portifolio-pmdpaula.vercel.app/"
-      />
-      <meta property="og:title" content="Portifólio de Pedro de Paula" />
-      <meta
-        property="og:description"
-        content="Portifólio de projetos em programação de Pedro Machado de Paula"
-      />
-      <meta property="og:image" content="" />
+      <meta property="og:url" content={urlBase} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta
-        property="twitter:url"
-        content="https://portifolio-pmdpaula.vercel.app/"
-      />
-      <meta property="twitter:title" content="Portifólio de Pedro de Paula" />
-      <meta
-        property="twitter:description"
-        content="Portifólio de projetos em programação de Pedro Machado de Paula"
-      />
-      <meta property="twitter:image" content="/images/seo.jpg" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
-        rel="stylesheet"
-      />
+      <meta property="twitter:url" content={urlBase} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
     </Head>
   );
 };

@@ -1,4 +1,4 @@
-/* eslint-disable indent */
+import React from 'react';
 import Document from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -8,8 +8,8 @@ export default class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage;
 
     try {
-      // eslint-disable-next-line prettier/prettier
-      ctx.renderPage = () => originalRenderPage({
+      ctx.renderPage = () =>
+        originalRenderPage({
           // eslint-disable-next-line react/jsx-props-no-spreading
           enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         });
