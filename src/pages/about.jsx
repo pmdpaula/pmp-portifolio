@@ -14,7 +14,7 @@ const AboutPage = () => (
       flexDirection="column"
       justifyContent="space-between"
       alignItems="center"
-      style={{ zIndex: 1000 }}
+      // style={{ zIndex: 1000 }}
     >
       <Grid.Col>
         <Text tag="p" variant="title">

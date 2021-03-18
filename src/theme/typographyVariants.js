@@ -27,7 +27,7 @@ const typographyVariants = {
   },
   titleXS: {
     fontSize: '24px',
-    fontWeight: '500',
+    fontWeight: '600',
     lineHeight: 1.25, // 125%
   },
   // [subTitle]

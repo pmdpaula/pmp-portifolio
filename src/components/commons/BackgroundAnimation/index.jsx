@@ -86,6 +86,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  pointer-events: none;
+  /* z-index: -10; */
   /* opacity: 0; */
 `;
 

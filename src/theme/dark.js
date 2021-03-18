@@ -23,6 +23,9 @@ export const colors = {
     link: {
       color: '#cfd8dc',
     },
+    black: {
+      color: '#000',
+    },
   },
   borders: {
     main: {

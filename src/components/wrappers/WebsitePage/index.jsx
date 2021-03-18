@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import Footer from '../../commons/Footer';
 import Menu from '../../commons/Menu';
@@ -8,7 +8,7 @@ import FormCadastro from '../../patterns/FormCadastro';
 import SEO from '../../commons/SEO';
 import BackgroundAnimation from '../../commons/BackgroundAnimation';
 
-export const WebsitePageContext = React.createContext({
+export const WebsitePageContext = createContext({
   toggleModalCadastro: () => {},
 });
 
@@ -19,7 +19,7 @@ export default function WebsitePageWrapper({
   bgAnimationProps,
   menuProps,
 }) {
-  const [isModalOpen, setModalState] = React.useState(false);
+  const [isModalOpen, setModalState] = useState(false);
 
   return (
     <WebsitePageContext.Provider
@@ -31,6 +31,7 @@ export default function WebsitePageWrapper({
       }}
     >
       <SEO {...seoProps} />
+
       <BackgroundAnimation
         numberOfBlocks={bgAnimationProps.numberOfBlocks}
         duration={bgAnimationProps.duration}
@@ -38,9 +39,15 @@ export default function WebsitePageWrapper({
         easing={bgAnimationProps.easing}
         dispersion={bgAnimationProps.dispersion}
         loop={bgAnimationProps.loop}
+        opacity={bgAnimationProps.opacity}
+        // style={{ zindex: -1000 }}
       />
-
-      <Box display="flex" flex="1" flexDirection="column">
+      <Box
+        display="flex"
+        flex="1"
+        flexDirection="column"
+        // style={{ zindex: bgAnimationProps.numberOfBlocks + 10 }}
+      >
         <Modal
           isOpen={isModalOpen}
           onClose={() => {
@@ -52,7 +59,7 @@ export default function WebsitePageWrapper({
         {menuProps.display && (
           <Menu onCadastrarClick={() => setModalState(true)} />
         )}
-        {children}
+        <main>{children}</main>
         <Footer />
       </Box>
     </WebsitePageContext.Provider>
@@ -72,6 +79,7 @@ WebsitePageWrapper.defaultProps = {
     easing: 'linear',
     dispersion: 400,
     loop: false,
+    opacity: 1,
   },
 };
 
@@ -94,6 +102,7 @@ WebsitePageWrapper.propTypes = {
     easing: PropTypes.string,
     dispersion: PropTypes.number,
     loop: PropTypes.bool,
+    opacity: PropTypes.number,
   }),
   children: PropTypes.node.isRequired,
 };

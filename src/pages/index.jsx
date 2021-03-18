@@ -20,7 +20,7 @@ const Capa = () => {
         // flexWrap="wrap"
         // flexDirection="column"
         justifyContent="center"
-        style={{ zIndex: 1000 }}
+        // style={{ zIndex: 1000 }}
       >
         <Box
           display="flex"
@@ -29,7 +29,7 @@ const Capa = () => {
           // alignItems="center"
           flexDirection="column"
           maxWidth={defaultStyles.contentWidth}
-          style={{ zIndex: 1000 }}
+          // style={{ zIndex: 1000 }}
         >
           <FrontText tag="span" variant="hugeTitle" textAlign="center">
             Pedro de Paula
