@@ -7,9 +7,6 @@ import Text from '../../../foundation/Text';
 import Square from '../../commons/Square/index';
 
 const ProjectScreen = ({ project }) => (
-  // console.log(project.card);
-  // const { colors, title, defaultStyles } = useContext(ThemeContext);
-
   <Box
     flex={1}
     display="flex"
