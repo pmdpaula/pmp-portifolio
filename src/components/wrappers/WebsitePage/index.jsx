@@ -7,6 +7,7 @@ import Box from '../../../foundation/layout/Box';
 import FormCadastro from '../../patterns/FormCadastro';
 import SEO from '../../commons/SEO';
 import BackgroundAnimation from '../../commons/BackgroundAnimation';
+import Grid from '../../../foundation/layout/Grid/index';
 
 export const WebsitePageContext = React.createContext({
   toggleModalCadastro: () => {},
@@ -18,6 +19,7 @@ export default function WebsitePageWrapper({
   // pageBoxProps,
   bgAnimationProps,
   menuProps,
+  footerProps,
 }) {
   const [isModalOpen, setModalState] = React.useState(false);
 
@@ -39,7 +41,12 @@ export default function WebsitePageWrapper({
         dispersion={bgAnimationProps.dispersion}
         loop={bgAnimationProps.loop}
       />
-      <Box display="flex" flex="1" flexDirection="column">
+      <Grid.Container
+        display="flex"
+        flex="1"
+        flexDirection="column"
+        alignItens="space-around"
+      >
         <Modal
           isOpen={isModalOpen}
           onClose={() => {
@@ -49,11 +56,14 @@ export default function WebsitePageWrapper({
           {propsDoModal => <FormCadastro propsDoModal={propsDoModal} />}
         </Modal>
         {menuProps.display && (
-          <Menu onCadastrarClick={() => setModalState(true)} />
+          <Menu
+            onCadastrarClick={() => setModalState(true)}
+            show={menuProps.display}
+          />
         )}
         <main>{children}</main>
-        <Footer />
-      </Box>
+        <Footer show={footerProps.display} />
+      </Grid.Container>
     </WebsitePageContext.Provider>
   );
 }
@@ -62,6 +72,9 @@ WebsitePageWrapper.defaultProps = {
   seoProps: {},
   pageBoxProps: {},
   menuProps: {
+    display: true,
+  },
+  footerProps: {
     display: true,
   },
   bgAnimationProps: {
@@ -79,6 +92,9 @@ WebsitePageWrapper.propTypes = {
     headTitle: PropTypes.string,
   }),
   menuProps: PropTypes.shape({
+    display: PropTypes.bool,
+  }),
+  footerProps: PropTypes.shape({
     display: PropTypes.bool,
   }),
   pageBoxProps: PropTypes.shape({

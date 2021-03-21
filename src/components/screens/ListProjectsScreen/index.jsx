@@ -62,59 +62,50 @@ const ListProjectsScreen = ({ projectsData }) => {
         maxWidth={defaultStyles.contentWidth}
       >
         <Grid.Col
-        // display="flex"
-        // justifyContent="center"
-        // alignItems="center"
-        // value={({ sm: 12 }, { md: 8 }, { lg: 12 })}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          // maxWidth={defaultStyles.contentWidth}
         >
-          {/* <Grid.Col> */}
-          <Grid.Col
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
-            // maxWidth={defaultStyles.contentWidth}
+          <Text tag="h1" variant="title" style={{ zIndex: 100 }}>
+            Segue aqui meus projetos
+          </Text>
+
+          <Square
+            title="Categorias"
+            value={({ sm: 11 }, { md: 10 }, { lg: 8 })}
           >
-            <Text tag="h1" variant="title" style={{ zIndex: 100 }}>
-              Segue aqui meus projetos
-            </Text>
-
-            <Square
-              title="Categorias"
-              value={({ sm: 11 }, { md: 10 }, { lg: 6 })}
+            <Button
+              onClick={() => {
+                setListedCategory('all');
+              }}
+              variant={listedCategory === 'all' && 'secondary.main'}
+              style={{ margin: '0.2em', width: '18em' }}
             >
-              <Button
-                onClick={() => {
-                  setListedCategory('all');
-                }}
-                variant={listedCategory === 'all' && 'secondary.main'}
-                style={{ margin: '0.2em', width: '18em' }}
-              >
-                Todas
-              </Button>
+              Todas
+            </Button>
 
-              <ButtonsOfCategories />
-            </Square>
-          </Grid.Col>
-
-          <Grid.Row display="flex" justifyContent="center" alignItems="center">
-            {projectsToShow.map((project, idx) => {
-              const cardKey = `${project.id}_${idx}`;
-              return (
-                <ProjectCard
-                  key={cardKey}
-                  title={project.title}
-                  titleback={project.card.cardTitleBack}
-                  imgsrc={project.card.cardImgSrc}
-                  imgalt={project.card.cardImgAlt}
-                  text={project.card.cardText}
-                  link={`/projects/${project.id}`}
-                />
-              );
-            })}
-          </Grid.Row>
-          {/* </Box> */}
+            <ButtonsOfCategories />
+          </Square>
         </Grid.Col>
+
+        <Grid.Row display="flex" justifyContent="center" alignItems="center">
+          {projectsToShow.map((project, idx) => {
+            const cardKey = `${project.id}_${idx}`;
+            return (
+              <ProjectCard
+                key={cardKey}
+                title={project.title}
+                titleback={project.card.cardTitleBack}
+                imgsrc={project.card.cardImgSrc}
+                imgalt={project.card.cardImgAlt}
+                text={project.card.cardText}
+                link={`/projects/${project.id}`}
+              />
+            );
+          })}
+        </Grid.Row>
       </Box>
     </>
   );

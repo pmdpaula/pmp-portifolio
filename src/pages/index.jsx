@@ -20,16 +20,16 @@ const Capa = () => {
         // flexWrap="wrap"
         // flexDirection="column"
         justifyContent="center"
-        style={{ zIndex: 1000 }}
+        // alignItems="space-around"
+        // style={{ zIndex: 200 }}
       >
         <Box
           display="flex"
-          // flexWrap='wrap'
           justifyContent="center"
-          // alignItems="center"
+          alignItems="center"
           flexDirection="column"
           maxWidth={defaultStyles.contentWidth}
-          style={{ zIndex: 1000 }}
+          style={{ zIndex: 200, height: '100vh' }}
         >
           <FrontText tag="span" variant="hugeTitle" textAlign="center">
             Pedro de Paula
@@ -44,8 +44,6 @@ const Capa = () => {
             PORTIFÓLIO
           </Text>
         </Box>
-
-        {/* <Footer /> */}
       </Box>
     </>
   );
@@ -55,6 +53,12 @@ export default websitePageHOC(Capa, {
   pageWrapperProps: {
     seoProps: {
       headTitle: 'Home',
+    },
+    menuProps: {
+      display: false,
+    },
+    footerProps: {
+      display: false,
     },
     bgAnimationProps: {
       loop: true,

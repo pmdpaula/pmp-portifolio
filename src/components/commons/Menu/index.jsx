@@ -8,7 +8,7 @@ import FrontText from '../../FrontText/FrontText';
 import FormCadastro from '../../patterns/FormCadastro/index';
 import Modal from '../Modal/index';
 
-const Menu = () => {
+const Menu = props => {
   const [isModalOpen, setIsModalState] = useState(false);
 
   const { colors } = useContext(ThemeContext);
@@ -33,7 +33,7 @@ const Menu = () => {
         {propsDoModal => <FormCadastro propsDoModal={propsDoModal} />}
       </Modal>
 
-      <MenuWrapper>
+      <MenuWrapper {...props}>
         <MenuWrapper.LeftSide>
           {' '}
           <FrontText tag="span" variant="subTitle" textAlign="center">
