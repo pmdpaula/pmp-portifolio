@@ -9,6 +9,8 @@ const MenuWrapper = styled.header`
   flex-wrap: wrap;
   max-width: 98%;
   margin: 18px;
+  opacity: ${props => (props.show ? '1' : '0')};
+  pointer-events: ${props => !props.show && 'none'};
   /* ${breakpointsMedia({
     md: css`
       margin-top: 24px;

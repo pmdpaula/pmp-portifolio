@@ -66,7 +66,9 @@ const FooterWrapper = styled.footer`
   /* max-width: 95vw; */
 
   background: ${({ theme }) => theme.colors.background.secondary.color};
-  opacity: 0.8;
+  opacity: ${props => (props.show ? '0.8' : '0')};
+  pointer-events: ${props => !props.show && 'none'};
+  // opacity: 0.8;
   box-shadow: ${({ theme }) => theme.defaultStyles.boxShadow};
   max-height: 100px;
   ${breakpointsMedia({

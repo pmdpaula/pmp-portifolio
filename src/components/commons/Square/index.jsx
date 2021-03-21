@@ -142,11 +142,13 @@ const SquareBody = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0.8em 1.2em;
+  padding: 0.8em 1em;
 
   ${breakpointsMedia({
     md: css`
-      padding: 0.8em 2.8em;
+      padding: 0.8em 2em;
+      flex-direction: row;
+      justify-content: space-around;
     `,
   })}
 `;
