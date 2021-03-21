@@ -39,7 +39,6 @@ export default function WebsitePageWrapper({
         dispersion={bgAnimationProps.dispersion}
         loop={bgAnimationProps.loop}
       />
-
       <Box display="flex" flex="1" flexDirection="column">
         <Modal
           isOpen={isModalOpen}
@@ -52,7 +51,7 @@ export default function WebsitePageWrapper({
         {menuProps.display && (
           <Menu onCadastrarClick={() => setModalState(true)} />
         )}
-        {children}
+        <main>{children}</main>
         <Footer />
       </Box>
     </WebsitePageContext.Provider>
