@@ -2,14 +2,14 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/utils/breakpointsMedia';
 
-const MenuWrapper = styled.nav`
+const MenuWrapper = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 98%;
   margin: 18px;
-  ${breakpointsMedia({
+  /* ${breakpointsMedia({
     md: css`
       margin-top: 24px;
       max-width: 700px;
@@ -20,7 +20,7 @@ const MenuWrapper = styled.nav`
     xl: css`
       max-width: 1222px;
     `,
-  })};
+  })}; */
 `;
 
 export default MenuWrapper;

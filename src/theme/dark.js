@@ -23,6 +23,12 @@ export const colors = {
     link: {
       color: '#cfd8dc',
     },
+    black: {
+      color: '#000',
+    },
+    white: {
+      color: '#fff',
+    },
   },
   borders: {
     main: {
@@ -38,7 +44,7 @@ export const colors = {
   secondary: {
     main: {
       color: '#F57C00',
-      contrastText: '#29434E',
+      contrastText: '#000',
     },
   },
   tertiary: {

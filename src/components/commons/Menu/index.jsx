@@ -14,7 +14,7 @@ const Menu = () => {
   const { colors } = useContext(ThemeContext);
 
   return (
-    <header>
+    <>
       {/*
         [SOLID]
         S = Single Responsability
@@ -61,7 +61,7 @@ const Menu = () => {
         </MenuWrapper.CentralSide>
         {/* <MenuWrapper.RightSide /> */}
       </MenuWrapper>
-    </header>
+    </>
   );
 };
 
