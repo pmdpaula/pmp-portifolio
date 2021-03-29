@@ -29,7 +29,7 @@ export async function getStaticProps() {
   const { db } = await connect();
 
   const projectsData = await db
-    .collection(process.env.PORTOFOLIOS_COLLECTION)
+    .collection(process.env.PORTIFOLIOS_COLLECTION)
     .find({})
     .toArray();
 

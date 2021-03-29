@@ -74,7 +74,7 @@ const ListProjectsScreen = ({ projectsData }) => {
 
           <Square
             title="Categorias"
-            value={({ sm: 11 }, { md: 10 }, { lg: 8 })}
+            value={({ sm: 12 }, { md: 10 }, { lg: 8 })}
           >
             <Button
               onClick={() => {

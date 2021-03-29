@@ -8,9 +8,8 @@ import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const ProjectCardWrapper = styled.div`
   position: relative;
-  width: 280px;
   height: 400px;
-  margin: 30px;
+  margin: 1.8rem 1.5rem;
   font-weight: 500;
   box-shadow: 20px 20px 50px rgbs(0, 0, 0, 0.5);
   border-radius: ${({ theme }) => theme.defaultStyles.borderRadius};
@@ -25,6 +24,13 @@ const ProjectCardWrapper = styled.div`
   backdrop-filter: blur(8px);
   font-size: 3em;
   text-align: center;
+  width: 32rem;
+
+  ${breakpointsMedia({
+    md: css`
+      width: 28rem;
+    `,
+  })}
 `;
 
 export default ProjectCardWrapper;

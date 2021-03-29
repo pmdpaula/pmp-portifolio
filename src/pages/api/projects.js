@@ -4,7 +4,7 @@ export default async (req, res) => {
   const { db } = await connect();
 
   const projects = await db
-    .collection(process.env.PORTOFOLIOS_COLLECTION)
+    .collection(process.env.PORTIFOLIOS_COLLECTION)
     .find({})
     .sort({ category: 1 })
     .toArray();
