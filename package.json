@@ -10,7 +10,8 @@
     "custom-script": "node ./script-test.js",
     "prepare": "husky install",
     "commit": "cz",
-    "test:integration:open": "cypress open"
+    "test:integration:open": "cypress open",
+    "test:integration": "cypress run --headless"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
@@ -22,6 +23,7 @@
     "mongodb": "^3.6.5",
     "next": "latest",
     "next-images": "^1.7.0",
+    "nookies": "^2.5.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
     "react-anime": "^3.0.3",

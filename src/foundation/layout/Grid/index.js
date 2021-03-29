@@ -129,6 +129,11 @@ const Grid = {
       `,
     })}
 
+    ${propToStyle('zIndex')}
+    ${propToStyle('flex')}
+    ${propToStyle('justifyContent')}
+    ${propToStyle('AlignItems')}
+    ${propToStyle('flexDirection')}
     ${propToStyle('marginTop')}
   `,
 
