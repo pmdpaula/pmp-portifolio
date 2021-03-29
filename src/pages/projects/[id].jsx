@@ -21,7 +21,7 @@ export const getStaticProps = async ({ params }) => {
   const { db } = await connect();
 
   const projectData = await db
-    .collection(process.env.PORTOFOLIOS_COLLECTION)
+    .collection(process.env.PORTIFOLIOS_COLLECTION)
     .findOne({ id: params.id });
   // .toArray();
 
@@ -51,7 +51,7 @@ export const getStaticPaths = async () => {
   const { db } = await connect();
 
   const projectsData = await db
-    .collection(process.env.PORTOFOLIOS_COLLECTION)
+    .collection(process.env.PORTIFOLIOS_COLLECTION)
     .find({})
     .toArray();
 

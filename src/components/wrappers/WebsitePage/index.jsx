@@ -7,6 +7,8 @@ import BackgroundAnimation from '../../commons/BackgroundAnimation';
 import Footer from '../../commons/Footer';
 import Menu from '../../commons/Menu';
 import Modal from '../../commons/Modal';
+// import Box from '../../../foundation/layout/Box';
+import FormCadastro from '../../patterns/FormCadastro';
 import SEO from '../../commons/SEO';
 import FormCadastro from '../../patterns/FormCadastro';
 
@@ -58,7 +60,7 @@ export default function WebsitePageWrapper({
         </Modal>
         {menuProps.display && (
           <Menu
-            onCadastrarClick={() => setModalState(true)}
+            // onCadastrarClick={() => setModalState(true)}
             show={menuProps.display}
           />
         )}
