@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle, css } from 'styled-components';
-import { motion } from 'framer-motion';
 
 const ModalWrapper = styled.div`
   display: flex;

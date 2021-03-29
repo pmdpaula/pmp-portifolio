@@ -1,14 +1,14 @@
+import _ from 'lodash';
+import { PropTypes } from 'prop-types';
 import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from 'styled-components';
-import { PropTypes } from 'prop-types';
-import _ from 'lodash';
 
 import Box from '../../../foundation/layout/Box';
 import Grid from '../../../foundation/layout/Grid';
-import ProjectCard from '../../ProjectCard';
 import Text from '../../../foundation/Text/index';
-import Square from '../../commons/Square';
 import Button from '../../commons/Button/index';
+import Square from '../../commons/Square';
+import ProjectCard from '../../ProjectCard';
 
 const ListProjectsScreen = ({ projectsData }) => {
   const [listedCategory, setListedCategory] = useState('all');

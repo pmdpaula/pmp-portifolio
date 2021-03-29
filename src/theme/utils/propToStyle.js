@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import breakpointsMedia from './breakpointsMedia';
 
 export default function propToStyle(propName) {

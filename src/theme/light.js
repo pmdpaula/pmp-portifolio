@@ -1,5 +1,5 @@
-import typographyVariants from './typographyVariants';
 import { breakpoints, defaultStyles } from './index';
+import typographyVariants from './typographyVariants';
 
 export const colors = {
   background: {

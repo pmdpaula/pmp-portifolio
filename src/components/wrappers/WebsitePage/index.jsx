@@ -1,13 +1,14 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import Box from '../../../foundation/layout/Box';
+import Grid from '../../../foundation/layout/Grid/index';
+import BackgroundAnimation from '../../commons/BackgroundAnimation';
 import Footer from '../../commons/Footer';
 import Menu from '../../commons/Menu';
 import Modal from '../../commons/Modal';
-// import Box from '../../../foundation/layout/Box';
-import FormCadastro from '../../patterns/FormCadastro';
 import SEO from '../../commons/SEO';
-import BackgroundAnimation from '../../commons/BackgroundAnimation';
-import Grid from '../../../foundation/layout/Grid/index';
+import FormCadastro from '../../patterns/FormCadastro';
 
 export const WebsitePageContext = React.createContext({
   toggleModalCadastro: () => {},

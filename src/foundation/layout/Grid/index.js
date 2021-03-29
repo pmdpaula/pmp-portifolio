@@ -1,5 +1,6 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components';
+
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import propToStyle from '../../../theme/utils/propToStyle';
 
@@ -95,11 +96,13 @@ const Col = styled.div`
         : '',
     });
   }}
-    ${propToStyle('display')}
-    ${propToStyle('alignItems')}
-    ${propToStyle('justifyContent')}
-    ${propToStyle('flexDirection')}
-    ${propToStyle('order')}
+
+  ${propToStyle('display')}
+  ${propToStyle('order')}
+  ${propToStyle('flex')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('justifyContent')}
+  ${propToStyle('flexDirection')}
 `;
 
 Col.defaultProps = {

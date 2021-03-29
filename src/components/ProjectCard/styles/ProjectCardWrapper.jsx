@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-// import PropTypes from 'prop-types';
 
+// import PropTypes from 'prop-types';
 // import Tilt from 'react-parallax-tilt';
 // import Image from 'next/image';
 // import Link from 'next/link';

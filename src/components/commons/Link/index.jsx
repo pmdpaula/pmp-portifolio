@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
-import NextLink from 'next/link';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import get from 'lodash/get';
+import NextLink from 'next/link';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const StyledLink = styled.a`
   color: inherit;

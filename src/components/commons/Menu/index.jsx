@@ -1,12 +1,11 @@
 import { useContext, useState } from 'react';
 import { ThemeContext } from 'styled-components';
 
-import MenuWrapper from './styles/MenuWrapper';
-
-import GlassButton from '../GlassButton';
 import FrontText from '../../FrontText/FrontText';
 import FormCadastro from '../../patterns/FormCadastro/index';
+import GlassButton from '../GlassButton';
 import Modal from '../Modal/index';
+import MenuWrapper from './styles/MenuWrapper';
 
 const Menu = props => {
   const [isModalOpen, setIsModalState] = useState(false);
