@@ -91,6 +91,7 @@ const Col = styled.div`
 
   ${propToStyle('display')}
   ${propToStyle('order')}
+  ${propToStyle('flex')}
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
