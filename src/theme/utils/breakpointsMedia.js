@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { css } from 'styled-components';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 import { breakpoints } from '../index';
 
 const breakpointsMedia = cssByBreakpoint => {
