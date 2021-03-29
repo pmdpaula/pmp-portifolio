@@ -1,12 +1,11 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
-import websitePageHOC from '../components/wrappers/WebsitePage/hoc';
-
-import Text from '../foundation/Text';
-// import { WebsitePageContext } from '../components/wrappers/WebsitePage';
-import Box from '../foundation/layout/Box';
 
 import FrontText from '../components/FrontText/FrontText';
+import websitePageHOC from '../components/wrappers/WebsitePage/hoc';
+// import { WebsitePageContext } from '../components/wrappers/WebsitePage';
+import Box from '../foundation/layout/Box';
+import Text from '../foundation/Text';
 
 const Capa = () => {
   // const websitePageContext = useContext(WebsitePageContext);

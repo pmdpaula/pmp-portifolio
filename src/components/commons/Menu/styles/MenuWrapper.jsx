@@ -1,5 +1,6 @@
 /* eslint-disable indent */
 import styled, { css } from 'styled-components';
+
 import breakpointsMedia from '../../../../theme/utils/breakpointsMedia';
 
 const MenuWrapper = styled.header`

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import websitePageHOC from '../../components/wrappers/WebsitePage/hoc';
 
 function LoginScreen() {

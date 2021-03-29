@@ -1,8 +1,8 @@
-import Text from '../foundation/Text';
+import Square from '../components/commons/Square/index';
+import websitePageHOC from '../components/wrappers/WebsitePage/hoc';
 import Box from '../foundation/layout/Box';
 import Grid from '../foundation/layout/Grid';
-import websitePageHOC from '../components/wrappers/WebsitePage/hoc';
-import Square from '../components/commons/Square/index';
+import Text from '../foundation/Text';
 
 const AboutPage = () => (
   // const { colors, title, defaultStyles } = useContext(ThemeContext);

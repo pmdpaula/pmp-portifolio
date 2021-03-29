@@ -1,11 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
-import styled, { css, ThemeContext } from 'styled-components';
-import ReactTooltip from 'react-tooltip';
-
 import * as FaIcons from 'react-icons/fa';
+import ReactTooltip from 'react-tooltip';
+import styled, { css, ThemeContext } from 'styled-components';
 
-import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import Text from '../../../foundation/Text';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const Footer = props => {
   const [isMounted, setIsMounted] = useState(false);

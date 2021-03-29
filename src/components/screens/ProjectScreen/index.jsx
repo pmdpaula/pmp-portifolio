@@ -1,5 +1,5 @@
-import { PropTypes } from 'prop-types';
 import Image from 'next/image';
+import { PropTypes } from 'prop-types';
 
 import Box from '../../../foundation/layout/Box';
 import Grid from '../../../foundation/layout/Grid';

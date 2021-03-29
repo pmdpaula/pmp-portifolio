@@ -1,9 +1,9 @@
 /* eslint-disable indent */
-import styled, { css } from 'styled-components';
 import { PropTypes } from 'prop-types';
-import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+import styled, { css } from 'styled-components';
 
 import Text from '../../foundation/Text';
+import breakpointsMedia from '../../theme/utils/breakpointsMedia';
 
 // https://www.youtube.com/watch?v=0ltdZ8CrqG8
 

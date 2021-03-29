@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+
 import Box from '../../../foundation/layout/Box';
 import Text from '../../../foundation/Text/index';
 

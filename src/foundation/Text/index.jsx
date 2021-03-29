@@ -1,10 +1,11 @@
 /* eslint-disable indent */
-import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
-import propToStyle from '../../theme/utils/propToStyle';
-import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+import styled, { css } from 'styled-components';
+
 import Link from '../../components/commons/Link/index';
+import breakpointsMedia from '../../theme/utils/breakpointsMedia';
+import propToStyle from '../../theme/utils/propToStyle';
 
 const Text = ({ variant, children, tag, href, ...props }) => {
   if (href) {

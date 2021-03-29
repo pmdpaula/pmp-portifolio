@@ -1,6 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const SEO = ({ headTitle }) => {
   const baseTitle = process.env.NEXT_PUBLIC_TITLE_PAGE;

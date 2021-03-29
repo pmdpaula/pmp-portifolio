@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+
 // import theme from '../../../../theme';
 // import themeLight from '../../../../theme/light';
 import themeDark from '../../../../theme/dark';

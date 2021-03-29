@@ -1,14 +1,13 @@
 import { Lottie } from '@crello/react-lottie';
-import { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { useContext, useState } from 'react';
 import { ThemeContext } from 'styled-components';
-import Button from '../../commons/Button';
-import TextField from '../../forms/TextField';
+
 import Box from '../../../foundation/layout/Box';
 import Grid from '../../../foundation/layout/Grid';
 import Text from '../../../foundation/Text';
-
+import Button from '../../commons/Button';
+import TextField from '../../forms/TextField';
 import errorAnimation from './animations/error.json';
 import okAnimation from './animations/ok.json';
 
