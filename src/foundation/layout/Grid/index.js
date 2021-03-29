@@ -96,11 +96,13 @@ const Col = styled.div`
         : '',
     });
   }}
-    ${propToStyle('display')}
-    ${propToStyle('alignItems')}
-    ${propToStyle('justifyContent')}
-    ${propToStyle('flexDirection')}
-    ${propToStyle('order')}
+
+  ${propToStyle('display')}
+  ${propToStyle('order')}
+  ${propToStyle('flex')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('justifyContent')}
+  ${propToStyle('flexDirection')}
 `;
 
 Col.defaultProps = {
