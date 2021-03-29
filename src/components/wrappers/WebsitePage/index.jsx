@@ -58,7 +58,7 @@ export default function WebsitePageWrapper({
         </Modal>
         {menuProps.display && (
           <Menu
-            onCadastrarClick={() => setModalState(true)}
+            // onCadastrarClick={() => setModalState(true)}
             show={menuProps.display}
           />
         )}
