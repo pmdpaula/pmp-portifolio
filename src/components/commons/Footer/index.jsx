@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { useContext, useEffect, useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import ReactTooltip from 'react-tooltip';
@@ -6,7 +7,32 @@ import styled, { css, ThemeContext } from 'styled-components';
 import Text from '../../../foundation/Text';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
-const Footer = props => {
+const FooterWrapper = styled.footer`
+  padding: 8px 28px;
+  margin: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ${({ theme }) => theme.defaultStyles.borderRadius};
+  /* max-width: 95vw; */
+
+  background: ${({ theme }) => theme.colors.background.secondary.color};
+  opacity: ${props => (props.show ? '0.8' : '0')};
+  pointer-events: ${props => !props.show && 'none'};
+  // opacity: 0.8;
+  box-shadow: ${({ theme }) => theme.defaultStyles.boxShadow};
+  max-height: 100px;
+  ${breakpointsMedia({
+    xs: css`
+      min-height: 60px;
+    `,
+    md: css`
+      min-height: 80px;
+    `,
+  })};
+`;
+
+const Footer = ({ isTest, ...props }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const { colors, title } = useContext(ThemeContext);
@@ -18,7 +44,7 @@ const Footer = props => {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
-      {isMounted && (
+      {isMounted && !isTest && (
         <ReactTooltip
           type={title === 'dark' ? 'light' : 'dark'}
           effect="solid"
@@ -55,27 +81,10 @@ const Footer = props => {
 
 export default Footer;
 
-const FooterWrapper = styled.footer`
-  padding: 8px 28px;
-  margin: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: ${({ theme }) => theme.defaultStyles.borderRadius};
-  /* max-width: 95vw; */
+Footer.defaultProps = {
+  isTest: false,
+};
 
-  background: ${({ theme }) => theme.colors.background.secondary.color};
-  opacity: ${props => (props.show ? '0.8' : '0')};
-  pointer-events: ${props => !props.show && 'none'};
-  // opacity: 0.8;
-  box-shadow: ${({ theme }) => theme.defaultStyles.boxShadow};
-  max-height: 100px;
-  ${breakpointsMedia({
-    xs: css`
-      min-height: 60px;
-    `,
-    md: css`
-      min-height: 80px;
-    `,
-  })};
-`;
+Footer.propTypes = {
+  isTest: PropTypes.bool,
+};
