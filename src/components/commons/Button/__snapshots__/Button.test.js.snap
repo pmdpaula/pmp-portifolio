@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders component 1`] = `
+.c0 {
+  color: inherit;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: opacity;
+  transition: opacity;
+}
+
+.c0:hover,
+.c0:focus {
+  opacity: 0.5;
+}
+
+.c1 {
+  border: 0;
+  cursor: pointer;
+  padding: 12px 26px;
+  font-weight: bold;
+  opacity: 1;
+  -webkit-transition: opacity;
+  transition: opacity;
+  border-radius: 6px;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: 0.5;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
+
+@media only screen and (min-width:0px) {
+  .c1 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c1 {
+    padding: 12px 43px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+}
+
+<a
+  class="c0 c1"
+  href="/#"
+>
+  Botão
+</a>
+`;

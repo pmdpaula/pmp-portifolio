@@ -1,0 +1,1176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> renders component 1`] = `
+.c0 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.c1 {
+  padding: 20px;
+  font-family: 'Comfortaa',cursive;
+  color: #eceff1;
+  text-shadow: 5px 5px 5px #004d40;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.c1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #eceff1;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+}
+
+.c1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #004d40;
+  z-index: -2;
+  opacity: 0.3;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:768px) {
+  .c0 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c1::before {
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c1::before {
+    -webkit-filter: blur(60px);
+    filter: blur(60px);
+  }
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:1200px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+<span
+  class="c0 c1"
+  data-text="Pedro de Paula"
+>
+  Pedro de Paula
+</span>
+`;
+
+exports[`<Menu /> renders component 2`] = `
+.c0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #cfd8dc;
+  z-index: 1;
+  font-size: 10px;
+  font-weight: 400;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.c0:hover {
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  color: #070C0E;
+}
+
+.c0:hover::before {
+  -webkit-transform: skew(45deg) translate(200%);
+  -ms-transform: skew(45deg) translate(200%);
+  transform: skew(45deg) translate(200%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient( to left,rgba(255,255,255,0.15),transparent );
+  -webkit-transform: skew(45deg) translate(0);
+  -ms-transform: skew(45deg) translate(0);
+  transform: skew(45deg) translate(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:1200px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+  .c0 {
+    padding: 8px 28px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width:480px) {
+  .c0 {
+    width: 100px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0 {
+    padding: 18px 20px;
+    width: 90px;
+    border-radius: 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0 {
+    padding: 18px 30px;
+    width: 120px;
+    border-radius: 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0:hover {
+    -webkit-letter-spacing: 4px;
+    -moz-letter-spacing: 4px;
+    -ms-letter-spacing: 4px;
+    letter-spacing: 4px;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0:hover {
+    -webkit-letter-spacing: 6px;
+    -moz-letter-spacing: 6px;
+    -ms-letter-spacing: 6px;
+    letter-spacing: 6px;
+  }
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+<a
+  class="c0"
+  href="/"
+>
+  Home
+</a>
+`;
+
+exports[`<Menu /> renders component 3`] = `
+.c0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #cfd8dc;
+  z-index: 1;
+  font-size: 10px;
+  font-weight: 400;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.c0:hover {
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  color: #070C0E;
+}
+
+.c0:hover::before {
+  -webkit-transform: skew(45deg) translate(200%);
+  -ms-transform: skew(45deg) translate(200%);
+  transform: skew(45deg) translate(200%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient( to left,rgba(255,255,255,0.15),transparent );
+  -webkit-transform: skew(45deg) translate(0);
+  -ms-transform: skew(45deg) translate(0);
+  transform: skew(45deg) translate(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:1200px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+  .c0 {
+    padding: 8px 28px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width:480px) {
+  .c0 {
+    width: 100px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0 {
+    padding: 18px 20px;
+    width: 90px;
+    border-radius: 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0 {
+    padding: 18px 30px;
+    width: 120px;
+    border-radius: 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0:hover {
+    -webkit-letter-spacing: 4px;
+    -moz-letter-spacing: 4px;
+    -ms-letter-spacing: 4px;
+    letter-spacing: 4px;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0:hover {
+    -webkit-letter-spacing: 6px;
+    -moz-letter-spacing: 6px;
+    -ms-letter-spacing: 6px;
+    letter-spacing: 6px;
+  }
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+<a
+  class="c0"
+  href="/projects"
+>
+  Projetos
+</a>
+`;
+
+exports[`<Menu /> renders component 4`] = `
+.c0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #cfd8dc;
+  z-index: 1;
+  font-size: 10px;
+  font-weight: 400;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.c0:hover {
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  color: #070C0E;
+}
+
+.c0:hover::before {
+  -webkit-transform: skew(45deg) translate(200%);
+  -ms-transform: skew(45deg) translate(200%);
+  transform: skew(45deg) translate(200%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient( to left,rgba(255,255,255,0.15),transparent );
+  -webkit-transform: skew(45deg) translate(0);
+  -ms-transform: skew(45deg) translate(0);
+  transform: skew(45deg) translate(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:1200px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:0px) {
+  .c0 {
+    padding: 8px 28px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width:480px) {
+  .c0 {
+    width: 100px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0 {
+    padding: 18px 20px;
+    width: 90px;
+    border-radius: 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0 {
+    padding: 18px 30px;
+    width: 120px;
+    border-radius: 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0:hover {
+    -webkit-letter-spacing: 4px;
+    -moz-letter-spacing: 4px;
+    -ms-letter-spacing: 4px;
+    letter-spacing: 4px;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0:hover {
+    -webkit-letter-spacing: 6px;
+    -moz-letter-spacing: 6px;
+    -ms-letter-spacing: 6px;
+    letter-spacing: 6px;
+  }
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:480px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:0px) {
+
+}
+
+@media only screen and (min-width:768px) {
+
+}
+
+@media only screen and (min-width:992px) {
+
+}
+
+<a
+  class="c0"
+  href="/about"
+>
+  Sobre
+</a>
+`;
