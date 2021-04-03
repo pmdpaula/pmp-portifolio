@@ -22,7 +22,7 @@ const AboutPage = () => (
         justifyContent="center"
         alignItems="center"
         flex={1}
-        style={{ zIndex: 50 }}
+        zIndex={1}
       >
         <Square value={({ sm: 12 }, { md: 9 })} offset={{ md: 1 }}>
           <Text tag="p" variant="title">
