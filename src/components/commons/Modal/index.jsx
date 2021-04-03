@@ -36,7 +36,7 @@ const LockScroll = createGlobalStyle`
   }
 `;
 
-function Modal({ isOpen, onClose, children }) {
+function Modal({ isOpen, onClose, isTest, children }) {
   return (
     <ModalWrapper
       isOpen={isOpen}
@@ -50,7 +50,7 @@ function Modal({ isOpen, onClose, children }) {
         }
       }}
     >
-      {isOpen && <LockScroll />}
+      {isOpen && !isTest && <LockScroll />}
       <motion.div
         animate={isOpen ? 'open' : 'closed'}
         transition={{ duration: 10 }}
@@ -63,10 +63,15 @@ function Modal({ isOpen, onClose, children }) {
   );
 }
 
+Modal.defaultProps = {
+  isTest: false,
+};
+
 Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   children: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
+  isTest: PropTypes.bool,
 };
 
 export default Modal;

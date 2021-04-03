@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders component 1`] = `
+.c0 {
+  color: inherit;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: opacity;
+  transition: opacity;
+}
+
+.c0:hover,
+.c0:focus {
+  opacity: 0.5;
+}
+
+<a
+  class="c0"
+  href="/"
+>
+  Link
+</a>
+`;

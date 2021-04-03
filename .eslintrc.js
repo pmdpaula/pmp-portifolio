@@ -4,6 +4,7 @@ module.exports = {
     es2020: true,
     node: true,
     'cypress/globals': true,
+    'jest/globals': true,
   },
   extends: [
     'eslint:recommended',
@@ -48,4 +49,15 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
   },
+  overrides: [
+    {
+      files: ['**/*.test.js'],
+      plugins: ['jest'],
+      env: {
+        jest: true,
+      },
+      // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+      ...require('eslint-plugin-jest').configs.recommended,
+    },
+  ],
 };
