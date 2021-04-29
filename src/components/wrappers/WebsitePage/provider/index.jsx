@@ -8,6 +8,7 @@ import themeDark from '../../../../theme/dark';
 import GlobalStyle from '../../../../theme/GlobalStyle';
 
 export default function WebsiteGlobalProvider({ children }) {
+  // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState(themeDark);
   return (
     <ThemeProvider theme={theme}>

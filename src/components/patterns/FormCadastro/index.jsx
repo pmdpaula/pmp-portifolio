@@ -38,14 +38,14 @@ function FormContent() {
   const isFormInvalid =
     userInfo.usuario.length === 0 || userInfo.nome.length === 0;
 
-  const throwDiceSubmit = () => {
-    const myDice = Math.floor(Math.random() * 2);
-    if (myDice > 0) {
-      return setSubmissionStatus(formStates.DONE);
-    }
+  // const throwDiceSubmit = () => {
+  //   const myDice = Math.floor(Math.random() * 2);
+  //   if (myDice > 0) {
+  //     return setSubmissionStatus(formStates.DONE);
+  //   }
 
-    return setSubmissionStatus(formStates.ERROR);
-  };
+  //   return setSubmissionStatus(formStates.ERROR);
+  // };
 
   return (
     <form
@@ -55,37 +55,37 @@ function FormContent() {
         setIsFormSubmited(true);
 
         // Data Transfer Object
-        // const userDTO = {
-        //   username: userInfo.usuario,
-        //   name: userInfo.nome,
-        // };
+        const userDTO = {
+          username: userInfo.usuario,
+          name: userInfo.nome,
+        };
 
-        throwDiceSubmit();
+        // throwDiceSubmit();
 
-        // fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //   },
-        //   body: JSON.stringify(userDTO),
-        // })
-        //   .then(respostaDoServidor => {
-        //     if (respostaDoServidor.ok) {
-        //       return respostaDoServidor.json();
-        //     }
+        fetch('https://instalura-api.vercel.app/api/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userDTO),
+        })
+          .then(respostaDoServidor => {
+            if (respostaDoServidor.ok) {
+              return respostaDoServidor.json();
+            }
 
-        //     throw new Error('Não foi possível cadastrar o usuário agora :(');
-        //   })
-        //   .then(respostaConvertidaEmObjeto => {
-        //     setSubmissionStatus(formStates.DONE);
-        //     // eslint-disable-next-line no-console
-        //     console.log(respostaConvertidaEmObjeto);
-        //   })
-        //   .catch(error => {
-        //     setSubmissionStatus(formStates.ERROR);
-        //     // eslint-disable-next-line no-console
-        //     console.error(error);
-        //   });
+            throw new Error('Não foi possível cadastrar o usuário agora :(');
+          })
+          .then(respostaConvertidaEmObjeto => {
+            setSubmissionStatus(formStates.DONE);
+            // eslint-disable-next-line no-console
+            console.log(respostaConvertidaEmObjeto);
+          })
+          .catch(error => {
+            setSubmissionStatus(formStates.ERROR);
+            // eslint-disable-next-line no-console
+            console.error(error);
+          });
       }}
     >
       <Text variant="title" tag="h1" color="tertiary.main">

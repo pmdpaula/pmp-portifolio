@@ -4,12 +4,46 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import propToStyle from '../../../theme/utils/propToStyle';
 
+const Container = styled.div`
+  width: 100%;
+  padding-right: 28px;
+  padding-left: 28px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: initial;
+
+  ${breakpointsMedia({
+    sm: css`
+      max-width: 576px;
+    `,
+    md: css`
+      max-width: 768px;
+      padding-right: 16px;
+      padding-left: 16px;
+    `,
+    lg: css`
+      max-width: 1160px;
+    `,
+    xl: css`
+      max-width: 1222px;
+    `,
+  })}
+
+  ${propToStyle('marginTop')}
+  ${propToStyle('display')}
+  ${propToStyle('flex')}
+  ${propToStyle('flexDirection')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('zIndex')}
+`;
+
 const Col = styled.div`
   padding-right: 16px;
   padding-left: 16px;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
+
   ${({ value }) => {
     if (typeof value === 'number') {
       return css`
@@ -19,6 +53,7 @@ const Col = styled.div`
         max-width: ${(100 * value) / 12}%;
       `;
     }
+
     return breakpointsMedia({
       xs: value?.xs
         ? css`
@@ -62,6 +97,7 @@ const Col = styled.div`
         : '',
     });
   }}
+
   ${({ offset }) => {
     if (typeof offset === 'number') {
       return css`
@@ -103,6 +139,7 @@ const Col = styled.div`
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
+  ${propToStyle('zIndex')}
 `;
 
 Col.defaultProps = {
@@ -111,43 +148,13 @@ Col.defaultProps = {
 };
 
 const Grid = {
-  Container: styled.div`
-    width: 100%;
-    padding-right: 28px;
-    padding-left: 28px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: initial;
-    ${breakpointsMedia({
-      sm: css`
-        max-width: 576px;
-      `,
-      md: css`
-        max-width: 768px;
-        padding-right: 16px;
-        padding-left: 16px;
-      `,
-      lg: css`
-        max-width: 1160px;
-      `,
-      xl: css`
-        max-width: 1222px;
-      `,
-    })}
-
-    ${propToStyle('zIndex')}
-    ${propToStyle('flex')}
-    ${propToStyle('justifyContent')}
-    ${propToStyle('AlignItems')}
-    ${propToStyle('flexDirection')}
-    ${propToStyle('marginTop')}
-  `,
-
+  Container,
+  Col,
   Row: styled.div`
     display: flex;
     flex-wrap: wrap;
-    /* margin-right: -16px;
-    margin-left: -16px; */
+    /* margin-right: -16px; */
+    /* margin-left: -16px; */
     ${propToStyle('flex')}
     ${propToStyle('marginLeft')}
     ${propToStyle('marginRight')}
@@ -164,10 +171,6 @@ const Grid = {
     /* margin-right: -16px;
     margin-left: -16px; */
   `,
-  Col,
-
-  /* Col: styled.div`
-  ` */
 };
 
 export default Grid;
