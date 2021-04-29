@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { CMSGraphQLClient, gql } from '../../infra/cms/CMSGraphQLClient';
+import { CMSGraphQLClient, gql } from '../../../infra/cms/CMSGraphQLClient';
 
 export async function getProjectContent({ ident, preview }) {
   const query = gql`

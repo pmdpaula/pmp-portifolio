@@ -10,6 +10,8 @@ import Button from '../../commons/Button/index';
 import Square from '../../commons/Square';
 import ProjectCard from '../../ProjectCard';
 
+export { getCardsContent } from './getCardsContent';
+
 const ListProjectsScreen = ({ projectsData }) => {
   const [listedCategory, setListedCategory] = useState('all');
 

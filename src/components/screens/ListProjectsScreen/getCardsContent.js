@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { CMSGraphQLClient, gql } from '../../infra/cms/CMSGraphQLClient';
+import { CMSGraphQLClient, gql } from '../../../infra/cms/CMSGraphQLClient';
 
 export async function getCardsContent({ preview }) {
   const query = gql`

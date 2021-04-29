@@ -6,6 +6,9 @@ import Grid from '../../../foundation/layout/Grid';
 import Text from '../../../foundation/Text';
 import Square from '../../commons/Square/index';
 
+export { getProjectContent } from './getProjectContent';
+export { getProjectsPath } from './getProjectsPath';
+
 const ProjectScreen = ({ project }) => (
   <Box
     flex={1}

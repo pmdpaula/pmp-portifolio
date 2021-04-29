@@ -1,8 +1,8 @@
 // import { connect } from '../../../utils/database';
-import ListProjectsScreen from '../../components/screens/ListProjectsScreen';
-// import FAQScreen from '../../src/components/screens/ListProjectsScreen';
+import ListProjectsScreen, {
+  getCardsContent,
+} from '../../components/screens/ListProjectsScreen';
 import websitePageHOC from '../../components/wrappers/WebsitePage/hoc';
-import { getCardsContent } from './getCardsContent';
 
 function ListProjects({ projectsData }) {
   return <ListProjectsScreen projectsData={projectsData} />;
@@ -27,19 +27,27 @@ export default websitePageHOC(ListProjects, {
 });
 
 export async function getStaticProps() {
-  // const { db } = await connect();
-
-  // const projectsData = await db
-  //   .collection(process.env.PORTIFOLIOS_COLLECTION)
-  //   .find({})
-  //   .toArray();
-
   const projectsData = await getCardsContent(false);
 
   return {
     props: {
       projectsData,
-      // projectsData: JSON.parse(JSON.stringify(projectsData)),
     }, // will be passed to the page component as props
   };
 }
+
+// Dados vindo do MongoDB
+// export async function getStaticProps() {
+//   const { db } = await connect();
+
+//   const projectsData = await db
+//     .collection(process.env.PORTIFOLIOS_COLLECTION)
+//     .find({})
+//     .toArray();
+
+//   return {
+//     props: {
+//       projectsData: JSON.parse(JSON.stringify(projectsData)),
+//     }, // will be passed to the page component as props
+//   };
+// }
