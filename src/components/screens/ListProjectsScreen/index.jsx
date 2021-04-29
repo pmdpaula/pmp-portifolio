@@ -92,16 +92,16 @@ const ListProjectsScreen = ({ projectsData }) => {
 
         <Grid.Row display="flex" justifyContent="center" alignItems="center">
           {projectsToShow.map((project, idx) => {
-            const cardKey = `${project.id}_${idx}`;
+            const cardKey = `${project.ident}_${idx}`;
             return (
               <ProjectCard
                 key={cardKey}
                 title={project.title}
-                titleback={project.card.cardTitleBack}
-                imgsrc={project.card.cardImgSrc}
-                imgalt={project.card.cardImgAlt}
-                text={project.card.cardText}
-                link={`/projects/${project.id}`}
+                titleback={project.cardBlock[0].cardTitleBack}
+                imgsrc={project.cardBlock[0].cardImgSrc}
+                imgalt={project.cardBlock[0].cardImgAlt}
+                text={project.cardBlock[0].cardText}
+                link={`/projects/${project.ident}`}
               />
             );
           })}

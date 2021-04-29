@@ -1,9 +1,10 @@
-import { connect } from '../../../utils/database';
+// import { connect } from '../../../utils/database';
 import ProjectScreen from '../../components/screens/ProjectScreen';
 import websitePageHOC from '../../components/wrappers/WebsitePage/hoc';
+import { getProjectContent } from './getProjectContent';
+import { getProjectsPath } from './getProjectsPath';
 
 function ProjectInternalScreen({ project }) {
-  // console.log(typeof project);
   // return (
   //   <div>
   //     Ei
@@ -18,17 +19,18 @@ ProjectInternalScreen.propTypes = ProjectScreen.propTypes;
 export default websitePageHOC(ProjectInternalScreen);
 
 export const getStaticProps = async ({ params }) => {
-  const { db } = await connect();
+  const projectData = await getProjectContent(params);
 
-  const projectData = await db
-    .collection(process.env.PORTIFOLIOS_COLLECTION)
-    .findOne({ id: params.id });
-  // .toArray();
+  // const { db } = await connect();
+  // const projectData = await db
+  //   .collection(process.env.PORTIFOLIOS_COLLECTION)
+  //   .findOne({ id: params.id });
+  // // .toArray();
 
   return {
     props: {
       // id: projectData.id,
-      project: JSON.parse(JSON.stringify(projectData)),
+      project: projectData,
       pageWrapperProps: {
         seoProps: {
           headTitle: projectData.title,
@@ -48,14 +50,19 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const { db } = await connect();
+  const projectsPath = await getProjectsPath(false);
 
-  const projectsData = await db
-    .collection(process.env.PORTIFOLIOS_COLLECTION)
-    .find({})
-    .toArray();
+  const paths = projectsPath.reduce((acc, projectPath) => {
+    const row = { params: { ident: projectPath.ident } };
+    return [...acc, row];
+  }, []);
 
-  const paths = projectsData.map(e => ({ params: { id: e.id } }));
+  // const projectsData = await db
+  //   .collection(process.env.PORTIFOLIOS_COLLECTION)
+  //   .find({})
+  //   .toArray();
+
+  // const paths = projectsData.map(e => ({ params: { id: e.id } }));
 
   return {
     paths,
