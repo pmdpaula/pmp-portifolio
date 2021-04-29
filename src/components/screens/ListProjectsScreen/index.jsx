@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { PropTypes } from 'prop-types';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from 'styled-components';
 
 import Box from '../../../foundation/layout/Box';

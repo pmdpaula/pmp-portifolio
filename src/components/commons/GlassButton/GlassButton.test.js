@@ -1,7 +1,3 @@
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
-
-import Text from '../../../foundation/Text/index';
 import { render, screen } from '../../../infra/test/testUtils';
 import GlassButton from './index';
 

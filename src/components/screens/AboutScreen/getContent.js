@@ -20,8 +20,7 @@ export async function getContent({ preview }) {
     }
   `;
   const client = CMSGraphQLClient({ preview });
-
   const response = await client.query({ query });
-  console.log(response.data.messages);
+
   return response.data.messages.pageAbout;
 }
