@@ -43,7 +43,6 @@ const loginService = {
       });
 
       // Escrever os testes
-      console.log(respostaConvertida);
       return {
         token,
       };

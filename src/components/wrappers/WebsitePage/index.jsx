@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Box from '../../../foundation/layout/Box';
 import Grid from '../../../foundation/layout/Grid/index';
 import BackgroundAnimation from '../../commons/BackgroundAnimation';
 import Footer from '../../commons/Footer';

@@ -1,4 +1,4 @@
-import { render, screen } from '../../../infra/test/testUtils';
+import { render } from '../../../infra/test/testUtils';
 import BackgroundAnimation from './index';
 
 describe('<BackgroundAnimation />', () => {

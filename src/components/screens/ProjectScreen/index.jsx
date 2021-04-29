@@ -6,6 +6,9 @@ import Grid from '../../../foundation/layout/Grid';
 import Text from '../../../foundation/Text';
 import Square from '../../commons/Square/index';
 
+export { getProjectContent } from './getProjectContent';
+export { getProjectsPath } from './getProjectsPath';
+
 const ProjectScreen = ({ project }) => (
   <Box
     flex={1}
@@ -41,8 +44,8 @@ const ProjectScreen = ({ project }) => (
           // alignItens="center"
         >
           <Image
-            src={project.card.cardImgSrc}
-            alt={project.card.cardImgAlt}
+            src={project.cardBlock[0].cardImgSrc}
+            alt={project.cardBlock[0].cardImgAlt}
             layout="responsive"
             width={400}
             height={400}
@@ -62,20 +65,22 @@ const ProjectScreen = ({ project }) => (
 
 ProjectScreen.propTypes = {
   project: PropTypes.shape({
-    _id: PropTypes.string,
-    id: PropTypes.string,
+    // _id: PropTypes.string,
+    ident: PropTypes.string,
     category: PropTypes.string,
     categoryTitle: PropTypes.string,
     title: PropTypes.string,
     subTitle: PropTypes.string,
     icon: PropTypes.string,
     description: PropTypes.string,
-    card: PropTypes.shape({
-      cardTitleBack: PropTypes.string,
-      cardImgSrc: PropTypes.string,
-      cardImgAlt: PropTypes.string,
-      cardText: PropTypes.string,
-    }),
+    cardBlock: PropTypes.arrayOf(
+      PropTypes.shape({
+        cardTitleBack: PropTypes.string,
+        cardImgSrc: PropTypes.string,
+        cardImgAlt: PropTypes.string,
+        cardText: PropTypes.string,
+      }),
+    ),
   }).isRequired,
 };
 

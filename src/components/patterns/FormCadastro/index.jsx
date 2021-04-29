@@ -38,14 +38,14 @@ function FormContent() {
   const isFormInvalid =
     userInfo.usuario.length === 0 || userInfo.nome.length === 0;
 
-  const throwDiceSubmit = () => {
-    const myDice = Math.floor(Math.random() * 2);
-    if (myDice > 0) {
-      return setSubmissionStatus(formStates.DONE);
-    }
+  // const throwDiceSubmit = () => {
+  //   const myDice = Math.floor(Math.random() * 2);
+  //   if (myDice > 0) {
+  //     return setSubmissionStatus(formStates.DONE);
+  //   }
 
-    return setSubmissionStatus(formStates.ERROR);
-  };
+  //   return setSubmissionStatus(formStates.ERROR);
+  // };
 
   return (
     <form

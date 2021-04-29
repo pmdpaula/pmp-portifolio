@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { PropTypes } from 'prop-types';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from 'styled-components';
 
 import Box from '../../../foundation/layout/Box';
@@ -9,6 +9,8 @@ import Text from '../../../foundation/Text/index';
 import Button from '../../commons/Button/index';
 import Square from '../../commons/Square';
 import ProjectCard from '../../ProjectCard';
+
+export { getCardsContent } from './getCardsContent';
 
 const ListProjectsScreen = ({ projectsData }) => {
   const [listedCategory, setListedCategory] = useState('all');
@@ -92,16 +94,16 @@ const ListProjectsScreen = ({ projectsData }) => {
 
         <Grid.Row display="flex" justifyContent="center" alignItems="center">
           {projectsToShow.map((project, idx) => {
-            const cardKey = `${project.id}_${idx}`;
+            const cardKey = `${project.ident}_${idx}`;
             return (
               <ProjectCard
                 key={cardKey}
                 title={project.title}
-                titleback={project.card.cardTitleBack}
-                imgsrc={project.card.cardImgSrc}
-                imgalt={project.card.cardImgAlt}
-                text={project.card.cardText}
-                link={`/projects/${project.id}`}
+                titleback={project.cardBlock[0].cardTitleBack}
+                imgsrc={project.cardBlock[0].cardImgSrc}
+                imgalt={project.cardBlock[0].cardImgAlt}
+                text={project.cardBlock[0].cardText}
+                link={`/projects/${project.ident}`}
               />
             );
           })}
