@@ -59,6 +59,7 @@ export const Btn = styled.div`
   }
 
   ::before {
+    filter: blur(5px);
     content: '';
     position: absolute;
     left: 10%;
@@ -91,6 +92,7 @@ export const Btn = styled.div`
   }
 
   ::after {
+    filter: blur(5px);
     content: '';
     position: absolute;
     left: 10%;
